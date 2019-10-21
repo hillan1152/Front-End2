@@ -5,7 +5,7 @@ import Comments from "./components/Comments";
 import Contact from "./components/Contact";
 import Dates from "./components/Dates";
 import Footer from "./components/Footer";
-import LandingPage from "./components/LandingPage";
+import HomePage from "./components/HomePage";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Messenger from "./components/Messenger";
@@ -18,7 +18,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Route path="/landing-page" component={LandingPage} />
+      <Route path="/home-page" component={HomePage} />
       <Route path="/dates" component={Dates} />
       <Route path="/add-vacation" component={AddVacation} />
       <Route path="/comments" component={Comments} />
@@ -31,7 +31,7 @@ function App() {
       <Route path="/suggestions" component={Suggestions} />
 
       <AddVacation />
-      <LandingPage />
+      <HomePage />
       
     </div>
   );
