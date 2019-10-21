@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-
 import AddVacation from "./components/addVacation";
 import Comments from "./components/Comments";
 import Contact from "./components/Contact";
@@ -31,7 +30,9 @@ function App() {
       <Route path="/nav-bar" component={NavBar} />
       <Route path="/suggestions" component={Suggestions} />
 
+      <AddVacation />
       <LandingPage />
+      
     </div>
   );
 }

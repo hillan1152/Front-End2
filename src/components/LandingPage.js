@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -36,8 +37,9 @@ function HomePage() {
                 <h1>The Vacation Plannner.</h1>
                 <h3>Vacation Planning made super easy!</h3>
                 <div className="btnBox">
-                    <button>Sign Up</button>
-                    <button>Let's Go!</button>
+                    <Link to="/sign-up"><button>Sign Up</button></Link>
+                    <Link to="/login"><button>Let's Go!</button></Link>
+                    
                 </div>
             </div>
             <div>
