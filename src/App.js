@@ -6,7 +6,7 @@ import Comments from "./components/Comments";
 import Contact from "./components/Contact";
 import Dates from "./components/Dates";
 import Footer from "./components/Footer";
-import HomePage from "./components/HomePage";
+import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
 import Messenger from "./components/Messenger";
 import NavBar from "./components/NavBar";
@@ -18,7 +18,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Route exact path="/homepage" component={HomePage} />
+      <Route path="/landing-page" component={LandingPage} />
       <Route path="/dates" component={Dates} />
       <Route path="/add-vacation" component={AddVacation} />
       <Route path="/comments" component={Comments} />
@@ -29,7 +29,7 @@ function App() {
       <Route path="/nav-bar" component={NavBar} />
       <Route path="/suggestions" component={Suggestions} />
 
-      <HomePage />
+      <LandingPage />
     </div>
   );
 }
