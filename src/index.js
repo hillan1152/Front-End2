@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import { applyMiddleware, createStore } from 'redux;'
 
-const store = createStore(reducer, applyMiddleWare(thunk));
+// const store = createStore(reducer, applyMiddleWare(thunk));
 ReactDOM.render(
     <Router>
       <App />
