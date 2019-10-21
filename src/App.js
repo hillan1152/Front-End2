@@ -8,6 +8,7 @@ import Dates from "./components/Dates";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 import Messenger from "./components/Messenger";
 import NavBar from "./components/NavBar";
 import Suggestions from "./components/Suggestions";
@@ -25,6 +26,7 @@ function App() {
       <Route path="/contact" component={Contact} />
       <Route path="/footer" component={Footer} />
       <Route path="/login" component={Login} />
+      <Route path="/sign-up" component={SignUp} />
       <Route path="/messenger" component={Messenger} />
       <Route path="/nav-bar" component={NavBar} />
       <Route path="/suggestions" component={Suggestions} />
