@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { Route } from "react-router";
 
 import AddVacation from "./components/addVacation";
 import Comments from "./components/Comments";
@@ -18,6 +18,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <Login/>
       <Route exact path="/homepage" component={HomePage} />
       <Route path="/dates" component={Dates} />
       <Route path="/add-vacation" component={AddVacation} />
