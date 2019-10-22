@@ -14,6 +14,8 @@ import Suggestions from "./components/Suggestions";
 import Trips from "./components/Trips";
 import TripPage from "./components/TripPage";
 import Navigation from "./components/Navigation";
+import SignUpPage from "./components/SignUpPage";
+import LoginPage from "./components/LoginPage";
 
 
 import './App.css';
@@ -22,24 +24,27 @@ function App() {
   return (
     <div className="App">
       <Route path="/home-page" component={HomePage} />
-      <Route path="/dates" component={Dates} />
-      <Route path="/add-vacation" component={AddVacation} />
-      <Route path="/comments" component={Comments} />
-      <Route path="/contacts" component={Contacts} />
-      <Route path="/footer" component={Footer} />
-      <Route path="/login" component={Login} />
-      <Route path="/sign-up" component={SignUp} />
-      <Route path="/messenger" component={Messenger} />
-      <Route path="/nav-bar" component={NavBar} />
-      <Route path="/suggestions" component={Suggestions} />
+      {/* <Route path="/dates" component={Dates} /> */}
+      {/* <Route path="/add-vacation" component={AddVacation} /> */}
+      {/* <Route path="/comments" component={Comments} /> */}
+      {/* <Route path="/contacts" component={Contacts} /> */}
+      {/* <Route path="/footer" component={Footer} /> */}
+      {/* <Route path="/login" component={Login} /> */}
+      {/* <Route path="/sign-up" component={SignUp} /> */}
+      {/* <Route path="/messenger" component={Messenger} /> */}
+      {/* <Route path="/nav-bar" component={NavBar} /> */}
+      {/* <Route path="/suggestions" component={Suggestions} /> */}
       <Route exact path="/trips" component={Trips} />
       <Route exact path="/trip-page" component={TripPage} />
-      <Route path="/navigation" component={Navigation} />
+      {/* <Route path="/navigation" component={Navigation} /> */}
+      <Route path="/sign-up-page" component={SignUpPage} />
+      <Route path="/login-page" component={LoginPage} />
 
 
-      {/* <HomePage /> */}
 
-      <TripPage />
+      <HomePage />
+   
+      {/* <TripPage /> */}
       
     </div>
   );
