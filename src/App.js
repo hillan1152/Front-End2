@@ -1,19 +1,9 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import AddVacation from "./components/addVacation";
-import Comments from "./components/Comments";
-import Contacts from "./components/Contacts";
-import Dates from "./components/Dates";
-import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import Messenger from "./components/Messenger";
-import NavBar from "./components/NavBar";
-import Suggestions from "./components/Suggestions";
 import Trips from "./components/Trips";
 import TripPage from "./components/TripPage";
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 import SignUpPage from "./components/SignUpPage";
 import LoginPage from "./components/LoginPage";
 
@@ -23,29 +13,31 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Route exact path="/components/HomePage.js" render={(props) => <HomePage {...props} />} />
 
-      {/* <Route path="/dates" component={Dates} /> */}
-      {/* <Route path="/add-vacation" component={AddVacation} /> */}
-      {/* <Route path="/comments" component={Comments} /> */}
-      {/* <Route path="/contacts" component={Contacts} /> */}
-      {/* <Route path="/footer" component={Footer} /> */}
-      {/* <Route path="/login" component={Login} /> */}
-      {/* <Route path="/sign-up" component={SignUp} /> */}
-      {/* <Route path="/messenger" component={Messenger} /> */}
-      {/* <Route path="/nav-bar" component={NavBar} /> */}
-      {/* <Route path="/suggestions" component={Suggestions} /> */}
-      <Route exact path="/trips" component={Trips} />
-      <Route exact path="/trip-page" component={TripPage} />
-      {/* <Route path="/navigation" component={Navigation} /> */}
-      <Route path="/sign-up-page" component={SignUpPage} />
-      <Route path="/login-page" component={LoginPage} />
+      <Route exact path="/"
+        render={(props) =>
+          <HomePage {...props} />
+        } />
 
+      <Route exact path="/trips"
+        render={(props) =>
+          <Trips {...props} />
+        } />
 
+      <Route exact path="/trip-page"
+        render={(props) =>
+          <TripPage {...props} />
+        } />
 
-      {/* <HomePage /> */}
+      <Route exact path="/sign-up-page"
+        render={(props) =>
+          <SignUpPage {...props} />
+        } />
 
-      {/* <TripPage /> */}
+      <Route exact path="/login-page"
+        render={(props) =>
+          <LoginPage {...props} />
+        } />
 
     </div>
   );

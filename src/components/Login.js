@@ -3,15 +3,17 @@ import { connect } from "react-redux";
 import { withFormik, Form, yupToFormErrors } from "formik";
 import * as Yup from "yup";
 import { logInUser } from "../actions";
+//this is for the link on the button
+import { Link } from "react-router-dom";
 
 const baseURL = 'http://bw-vacaplanning.herokuapp.com';
 
 
 function Login({ history, token }) {
-    const [user, setUser] = useState({ username: '', password: ''});
+    const [user, setUser] = useState({ username: '', password: '' });
 
     useEffect(() => {
-        if(token) {
+        if (token) {
             history.push("/addvacation");
         }
     }, [history, token])
@@ -25,8 +27,8 @@ function Login({ history, token }) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if(user.username&& user.password){
-            setUser({ username:"", password: ""});
+        if (user.username && user.password) {
+            setUser({ username: "", password: "" });
         }
     };
 
@@ -49,7 +51,7 @@ function Login({ history, token }) {
                         value={user.password}
                         onChange={handleChange}
                     />
-                    <button>Lets Go!</button>
+                    <Link to="/trips"><button>Lets Go!</button></Link>
                 </Form>
             </div>
         </div>
@@ -79,5 +81,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(
-    mapStateToProps, 
+    mapStateToProps,
     { logInUser: logInUser })(LoginWithFormik);
