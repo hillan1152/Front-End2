@@ -16,21 +16,24 @@ function AddVacation({ status, props }) {
 
             <Form>
                 <Field type="text" name="place" placeholder="Add Vacation" /><br />
-                <Link to="/trip-page"><button type="submit">Submit!</button></Link>
+
+                <button type="submit">Submit!</button>
+
             </Form>
             <div className="outCont">
                 {vacation.map(trip => (
                     <div className="output">
                         <ul key={trip.id}>
-                            {/* Not Sure Code below is needed */}
+
                             {/* <Link to="/trip-page"
-                                onClick={props.tripPage}>
+                                onClick={props.TripPage}>
                                 <button>
                                     <li>
                                         {trip.place}
                                     </li>
                                 </button>
                             </Link> */}
+
                         </ul>
                     </div>
                 ))}

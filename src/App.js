@@ -3,7 +3,6 @@ import { Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Trips from "./components/Trips";
 import TripPage from "./components/TripPage";
-// import Navigation from "./components/Navigation";
 import SignUpPage from "./components/SignUpPage";
 import LoginPage from "./components/LoginPage";
 
