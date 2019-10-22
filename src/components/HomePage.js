@@ -37,8 +37,8 @@ function HomePage() {
                 <h1>The Vacation Plannner.</h1>
                 <h3>Vacation Planning made super easy!</h3>
                 <div className="btnBox">
-                    <Link to="/sign-up"><button>Sign Up</button></Link>
-                    <Link to="/login"><button>Let's Go!</button></Link>
+                    <Link to="/sign-up-page"><button>Sign Up</button></Link>
+                    <Link to="/login-page"><button>Let's Go!</button></Link>
                     
                 </div>
             </div>
