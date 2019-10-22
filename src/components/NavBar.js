@@ -1,12 +1,15 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React from 'react';
+import Navigation from "./Navigation";
+// import Logo from "";
+
 
 
 
 function NavBar() {
     return (
         <div>
-            <Link to="/trips">Trips</Link>
+            {/* <Logo /> */}
+            <Navigation />
         </div>
     )
 }

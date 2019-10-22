@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar";
 import Suggestions from "./components/Suggestions";
 import Trips from "./components/Trips";
 import TripPage from "./components/TripPage";
+import Navigation from "./components/Navigation";
 
 
 import './App.css';
@@ -31,11 +32,13 @@ function App() {
       <Route path="/messenger" component={Messenger} />
       <Route path="/nav-bar" component={NavBar} />
       <Route path="/suggestions" component={Suggestions} />
-      <Route path="/trips" component={Trips} />
-      <Route path="/trip-page" component={TripPage} />
+      <Route exact path="/trips" component={Trips} />
+      <Route exact path="/trip-page" component={TripPage} />
+      <Route path="/navigation" component={Navigation} />
+
 
       {/* <HomePage /> */}
-      
+
       <TripPage />
       
     </div>
