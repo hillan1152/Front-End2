@@ -41,10 +41,10 @@ function App() {
       <Route path="/login-page" component={LoginPage} />
 
 
-
-      <HomePage />
+    
+      {/* <HomePage /> */}
    
-      {/* <TripPage /> */}
+      <TripPage />
       
     </div>
   );
