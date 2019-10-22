@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Logo from "../../img/Logo.png";
 
 
@@ -29,7 +30,7 @@ const modal = (props) => {
                 </div>
                 <div className="modal-footer">
                     <button className="btn-cancel" onClick={props.close}>Cancel</button>
-                    <button className="btn-continue">SignUp!</button>
+                    <Link to="/trips"><button className="btn-continue">SignUp!</button></Link>
                 </div>
             </div>
         </div>
