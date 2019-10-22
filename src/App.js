@@ -12,6 +12,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
 
       <Route exact path="/"
         render={(props) =>
@@ -38,6 +39,31 @@ function App() {
           <LoginPage {...props} />
         } />
 
+=======
+      <Route path="/home-page" component={HomePage} />
+      {/* <Route path="/dates" component={Dates} /> */}
+      {/* <Route path="/add-vacation" component={AddVacation} /> */}
+      {/* <Route path="/comments" component={Comments} /> */}
+      {/* <Route path="/contacts" component={Contacts} /> */}
+      {/* <Route path="/footer" component={Footer} /> */}
+      {/* <Route path="/login" component={Login} /> */}
+      {/* <Route path="/sign-up" component={SignUp} /> */}
+      {/* <Route path="/messenger" component={Messenger} /> */}
+      {/* <Route path="/nav-bar" component={NavBar} /> */}
+      {/* <Route path="/suggestions" component={Suggestions} /> */}
+      <Route exact path="/trips" component={Trips} />
+      <Route exact path="/trip-page" component={TripPage} />
+      {/* <Route path="/navigation" component={Navigation} /> */}
+      <Route path="/sign-up-page" component={SignUpPage} />
+      <Route path="/login-page" component={LoginPage} />
+
+
+    
+      {/* <HomePage /> */}
+   
+      <TripPage />
+      
+>>>>>>> 5835eb3df0eb6b1d14fed09d6563cf6b848547a2
     </div>
   );
 }

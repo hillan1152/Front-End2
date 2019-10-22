@@ -22,6 +22,7 @@ function AddVacation({ status, props }) {
             </Form>
             <div className="outCont">
                 {vacation.map(trip => (
+<<<<<<< HEAD
                     <div className="output">
                         <ul key={trip.id}>
 
@@ -36,6 +37,15 @@ function AddVacation({ status, props }) {
 
                         </ul>
                     </div>
+=======
+                <div className="output">
+                    <ul key={trip.id}>
+                        
+                     
+                    <Link to="/trip-page"><button><li>{trip.place}</li></button></Link>
+                    </ul>
+                </div>
+>>>>>>> 5835eb3df0eb6b1d14fed09d6563cf6b848547a2
                 ))}
             </div>
         </div>
