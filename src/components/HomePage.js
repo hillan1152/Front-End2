@@ -30,31 +30,6 @@ const Container = styled.div`
 `;
 
 
-<<<<<<< HEAD
-function HomePage() {
-    return (
-        <Container>
-            <div className="header"></div>
-            <section className="cta">
-                <div>
-                    <h1>The Vacation Plannner.</h1>
-                    <h3>Vacation Planning made super easy!</h3>
-                    <div className="btnBox">
-                        <Link to="/sign-up-page"><button>Sign Up</button></Link>
-                        <Link to="/login-page"><button>Let's Go!</button></Link>
-                    </div>
-
-
-                </div>
-            </section>
-
-            <div className="footer">
-                <h5>About Us</h5>
-                <h5>Site Map</h5>
-            </div>
-        </Container>
-    )
-=======
 class App extends Component {
 
     constructor() {
@@ -70,20 +45,20 @@ class App extends Component {
             isShowing: true
         });
     }
-   
+
 
     closeModalHandler = () => {
         this.setState({
             isShowing: false
         });
     }
-    
 
-    render () {
+
+    render() {
         return (
             <Container>
                 <div className="header" >
-                <img src={Logo} alt="Vacation Planner Logo"/>
+                    <img src={Logo} alt="Vacation Planner Logo" />
                 </div>
                 <section>
                     <div className="left">
@@ -93,23 +68,22 @@ class App extends Component {
                     <div className="right">
 
                     </div>
-               
-                { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
 
-                <button className="open-modal-btn" onClick={this.openModalHandler}>SignUp</button>
+                    {this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null}
 
-                <Modal
-                    className="modal"
-                    show={this.state.isShowing}
-                    close={this.closeModalHandler}>
+                    <button className="open-modal-btn" onClick={this.openModalHandler}>SignUp</button>
+
+                    <Modal
+                        className="modal"
+                        show={this.state.isShowing}
+                        close={this.closeModalHandler}>
                         Maybe aircrafts fly very high because they don't want to be seen in plane sight?
                 </Modal>
-                 </section>
+                </section>
             </Container>
         );
     }
- 
->>>>>>> 5835eb3df0eb6b1d14fed09d6563cf6b848547a2
+
 }
 
 export default App;
