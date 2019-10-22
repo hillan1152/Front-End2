@@ -34,7 +34,7 @@ function Login({ history, token }) {
         <div className="login-container">
             <div className="login-page">
                 <h2>Login</h2>
-                <form onSubmit={handleSubmit}>
+                <Form onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="username"
@@ -50,7 +50,7 @@ function Login({ history, token }) {
                         onChange={handleChange}
                     />
                     <button>Lets Go!</button>
-                </form>
+                </Form>
             </div>
         </div>
     )
