@@ -14,6 +14,8 @@ import Suggestions from "./components/Suggestions";
 import Trips from "./components/Trips";
 import TripPage from "./components/TripPage";
 import Navigation from "./components/Navigation";
+import SignUpPage from "./components/SignUpPage";
+import LoginPage from "./components/LoginPage";
 
 
 import './App.css';
@@ -35,6 +37,9 @@ function App() {
       <Route exact path="/trips" component={Trips} />
       <Route exact path="/trip-page" component={TripPage} />
       <Route path="/navigation" component={Navigation} />
+      <Route path="/sign-up-page" component={SignUpPage} />
+      <Route path="/login-page" component={LoginPage} />
+
 
 
       {/* <HomePage /> */}
