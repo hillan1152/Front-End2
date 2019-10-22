@@ -1,3 +1,4 @@
+
 /*import {
     FETCH_Item_START,
     FETCH_Item_SUCCESS,
@@ -42,6 +43,5 @@ export const rootReducer = (state = initialState, { type, payload,}) =>{
                 ...state,
                 fetching:true
             }    
-
     }
 }
