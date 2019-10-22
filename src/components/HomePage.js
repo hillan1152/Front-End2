@@ -1,58 +1,77 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+// import { Link } from "react-router-dom";
 
-import styled from "styled-components";
+import Modal from './Modal/Modal';
+// import styled from "styled-components";
 
-const Container = styled.div`
-    height: 100vh;
+// const Container = styled.div`
+//     height: 100vh;
 
-    .header {
+//     .header {
 
-    }
+//     }
 
-    .cta {
-        display: flex;
+//     .cta {
+//         display: flex;
 
 
-        .btnBox {
-            display: flex;
-            justify-content: space-evenly;
+//         .btnBox {
+//             display: flex;
+//             justify-content: space-evenly;
 
-            button {
-                font-size: 
-            }
+//             button {
+//                 font-size: 
+//             }
+//         }
+//     }
+// `;
+
+
+class App extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            isShowing: false
         }
     }
-`;
 
+    openModalHandler = () => {
+        this.setState({
+            isShowing: true
+        });
+    }
+   
 
-function HomePage() {
-    return (
-        <Container>
-            <div className="header">
+    closeModalHandler = () => {
+        this.setState({
+            isShowing: false
+        });
+    }
+    
 
-            </div>
-        <section className="cta">
+    render () {
+        return (
             <div>
-                <h1>The Vacation Plannner.</h1>
-                <h3>Vacation Planning made super easy!</h3>
-                <div className="btnBox">
-                    <Link to="/sign-up-page"><button>Sign Up</button></Link>
-                    <Link to="/login-page"><button>Let's Go!</button></Link>
-                    
-                </div>
-            </div>
-            <div>
+                { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
+
+                <button className="open-modal-btn" onClick={this.openModalHandler}>Open Modal</button>
+
+                <Modal
+                    className="modal"
+                    show={this.state.isShowing}
+                    close={this.closeModalHandler}>
+                        Maybe aircrafts fly very high because they don't want to be seen in plane sight?
+                </Modal>
                 
             </div>
-        </section>
-        <div className="footer">
-            <h5>About Us</h5>
-            <h5>Site Map</h5>
-        </div>
-        </Container>
-    )
+        );
+    }
+ 
 }
 
-export default HomePage
+export default App;
+
+
 
