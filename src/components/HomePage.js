@@ -2,29 +2,32 @@ import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
 
 import Modal from './Modal/Modal';
-// import styled from "styled-components";
+import Logo from "../img/Logo.png";
+import styled from "styled-components";
 
-// const Container = styled.div`
-//     height: 100vh;
+const Container = styled.div`
+    height: 100vh;
 
-//     .header {
+    .header {
+        background: lightgray;
+        display: flex;
+        padding: 2%;
+    }
 
-//     }
-
-//     .cta {
-//         display: flex;
+    /* .cta {
+        display: flex;
 
 
-//         .btnBox {
-//             display: flex;
-//             justify-content: space-evenly;
+        .btnBox {
+            display: flex;
+            justify-content: space-evenly;
 
-//             button {
-//                 font-size: 
-//             }
-//         }
-//     }
-// `;
+            button {
+                font-size: 
+            }
+        }
+    } */
+`;
 
 
 class App extends Component {
@@ -53,10 +56,22 @@ class App extends Component {
 
     render () {
         return (
-            <div>
+            <Container>
+                <div className="header" >
+                <img src={Logo} alt="Vacation Planner Logo"/>
+                </div>
+                <section>
+                    <div className="left">
+                        <h2>Vacation Planner</h2>
+                        <h3>Vacation Planning made super Easy!</h3>
+                    </div>
+                    <div className="right">
+
+                    </div>
+               
                 { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
 
-                <button className="open-modal-btn" onClick={this.openModalHandler}>Open Modal</button>
+                <button className="open-modal-btn" onClick={this.openModalHandler}>SignUp</button>
 
                 <Modal
                     className="modal"
@@ -64,8 +79,8 @@ class App extends Component {
                     close={this.closeModalHandler}>
                         Maybe aircrafts fly very high because they don't want to be seen in plane sight?
                 </Modal>
-                
-            </div>
+                 </section>
+            </Container>
         );
     }
  

@@ -24,7 +24,7 @@ function AddVacation({status, props}) {
                     <ul key={trip.id}>
                         
                      
-                    <Link to="/trip-page" ><button><li>{trip.place}</li></button></Link>
+                    <Link to="/trip-page"><button><li>{trip.place}</li></button></Link>
                     </ul>
                 </div>
                 ))}
