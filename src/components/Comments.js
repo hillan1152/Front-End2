@@ -1,35 +1,56 @@
-import React, { useState } from "react";
 
-const Comments = (props) => {
-    const [post, setPost] = useState({
-        body: '',
-    });
-    const changeHandler = event => {
-        setPost({ ...post, [event.target.name]: event.target.value });
-        console.log(event.target.value);
-    };
-    const submitForm = event => {
-        event.preventDefault();
-        // props.addNewPost(post);
-        setPost({ body: "" });
-    };
+import React, {useState, useEffect} from 'react';
+import axios from "axios";
+import { withFormik, Form, Field } from "formik";
+
+function UserForm({status}) {
+    const [comments, setComment] = useState([])
+    useEffect(() => {
+        status && setComment(comments => [...comments, status])
+      },[status])
     return (
-        <form onSubmit={submitForm}>
-            {/* <input type="text" />
-            <span>😃</span> */}
-            <label htmlFor="body"></label>
-            <textarea
-                name="body"
-                id="body"
-                placeHolder="Type your post here"
-                onChange={changeHandler}
-                value={post.body}
-            />
-            <button type="submit">Post</button>
-        </form>
+        <div>
+            <Form>
+            <Field
+                    component="textarea"
+                    type="text"
+                    name="commentary"
+                    placeholder="comments"
+                    />
+                
+                <button type="submit">Submit!</button>
+            </Form>
+            <div className="outCont">
+                {comments.map(words => (
+                <div className="output">
+                    <ul key={words.id}>
+                        
+                        <li>{words.commentary}</li>
+                    </ul>
+                </div>
+                ))}
+            </div>
+        </div>
     )
 }
 
-export default Comments
+const FormikUserForm = withFormik ({
+    mapPropsToValues({commentary }){
+        return{
+            commentary: commentary || ""
+        };
+    },
+   
+    handleSubmit(values, {setStatus, resetForm}) { 
+        axios.post('https://reqres.in/api/comments', values) 
+              .then(response => { 
+                  console.log(response)
+                  setStatus(response.data); 
+                  resetForm()
+                }) 
+              .catch(err => console.log(err.response));
+        }
+})(UserForm);
+export default FormikUserForm;
 
-//need to put <meta charset="UTF-8"> in HTML head if emoji is used
+
