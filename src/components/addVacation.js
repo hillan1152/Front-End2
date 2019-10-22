@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import { withFormik, Form, Field } from "formik";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+// import styled from "styled-components";
 
 
-function AddVacation({status}) {
+function AddVacation({status, props}) {
     const [vacation, setVacation] = useState([])
+
     useEffect(() => {
         status && setVacation(vacation => [...vacation, status])
       },[status])
@@ -20,8 +22,9 @@ function AddVacation({status}) {
                 {vacation.map(trip => (
                 <div className="output">
                     <ul key={trip.id}>
-                        <li>Place:  {trip.place}</li>
                         
+                     
+                    <Link to="/trip-page" onClick={props.tripPage}><button><li>{trip.place}</li></button></Link>
                     </ul>
                 </div>
                 ))}
