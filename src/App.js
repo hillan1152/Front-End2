@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from "react-router-dom";
 import AddVacation from "./components/addVacation";
 import Comments from "./components/Comments";
-import Contact from "./components/Contact";
+import Contacts from "./components/Contacts";
 import Dates from "./components/Dates";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
@@ -25,7 +25,7 @@ function App() {
       <Route path="/dates" component={Dates} />
       <Route path="/add-vacation" component={AddVacation} />
       <Route path="/comments" component={Comments} />
-      <Route path="/contact" component={Contact} />
+      <Route path="/contacts" component={Contacts} />
       <Route path="/footer" component={Footer} />
       <Route path="/login" component={Login} />
       <Route path="/sign-up" component={SignUp} />

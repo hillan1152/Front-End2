@@ -1,16 +1,25 @@
 import React from 'react';
 import Navigation from "./Navigation";
-// import Logo from "";
+import styled from "styled-components";
+import Logo from "../img/Logo.png";
 
+const Header = styled.div`
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+ padding: 2%;
+ border-bottom: 2px solid black;
+ 
 
+`;
 
 
 function NavBar() {
     return (
-        <div>
-            {/* <Logo /> */}
+        <Header>
+            <img src={Logo} alt="Vacation Planner Logo"/>
             <Navigation />
-        </div>
+        </Header>
     )
 }
 

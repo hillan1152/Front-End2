@@ -2,6 +2,21 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import { withFormik, Form, Field } from "formik";
+import styled from "styled-components";
+
+// const CommentPrint = styled.div `
+//     width: 100%;
+//     background: lightgray;
+//     height: 70vh;
+// `;
+
+const Input = styled.div`
+    width:100%;
+
+    /* ::placeholder {
+        width:85%;
+    } */
+`;
 
 function UserForm({status}) {
     const [comments, setComment] = useState([])
@@ -10,17 +25,7 @@ function UserForm({status}) {
       },[status])
     return (
         <div>
-            <Form>
-            <Field
-                    component="textarea"
-                    type="text"
-                    name="commentary"
-                    placeholder="comments"
-                    />
-                
-                <button type="submit">Submit!</button>
-            </Form>
-            <div className="outCont">
+            <div>
                 {comments.map(words => (
                 <div className="output">
                     <ul key={words.id}>
@@ -30,6 +35,18 @@ function UserForm({status}) {
                 </div>
                 ))}
             </div>
+            
+                <Form>
+                <Field
+                        component="textarea"
+                        type="text"
+                        name="commentary"
+                        placeholder="comments"
+                        />
+                    
+                    <button type="submit">Submit!</button>
+                </Form>
+           
         </div>
     )
 }
