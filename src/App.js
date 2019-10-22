@@ -21,7 +21,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Route path="/home-page" component={HomePage} />
+      <Route exact path="/Homepage" component={HomePage} />
       <Route path="/dates" component={Dates} />
       <Route path="/add-vacation" component={AddVacation} />
       <Route path="/comments" component={Comments} />
@@ -40,7 +40,7 @@ function App() {
       {/* <HomePage /> */}
 
       <TripPage />
-      
+
     </div>
   );
 }
