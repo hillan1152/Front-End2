@@ -4,6 +4,7 @@
 // import { withFormik, Form } from "formik";
 // import * as Yup from "yup";
 // import { signUpUser } from "../actions";
+// import { Link } from "react-router-dom";
 
 // // const baseURL = 'http://bw-vacaplanning.herokuapp.com';
 
@@ -57,7 +58,7 @@
 //                         value={user.password}
 //                         onChange={handleChange}
 //                     />
-//                     <button>Sign Up</button>
+//                      <Link to="/trips"><button>Sign Up</button></Link>
 //                 </Form>
 //             </div>
 //         </div>

@@ -45,20 +45,20 @@ class App extends Component {
             isShowing: true
         });
     }
-   
+
 
     closeModalHandler = () => {
         this.setState({
             isShowing: false
         });
     }
-    
 
-    render () {
+
+    render() {
         return (
             <Container>
                 <div className="header" >
-                <img src={Logo} alt="Vacation Planner Logo"/>
+                    <img src={Logo} alt="Vacation Planner Logo" />
                 </div>
                 <section>
                     <div className="left">
@@ -68,22 +68,22 @@ class App extends Component {
                     <div className="right">
 
                     </div>
-               
-                { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
 
-                <button className="open-modal-btn" onClick={this.openModalHandler}>SignUp</button>
+                    {this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null}
 
-                <Modal
-                    className="modal"
-                    show={this.state.isShowing}
-                    close={this.closeModalHandler}>
+                    <button className="open-modal-btn" onClick={this.openModalHandler}>SignUp</button>
+
+                    <Modal
+                        className="modal"
+                        show={this.state.isShowing}
+                        close={this.closeModalHandler}>
                         Maybe aircrafts fly very high because they don't want to be seen in plane sight?
                 </Modal>
-                 </section>
+                </section>
             </Container>
         );
     }
- 
+
 }
 
 export default App;
