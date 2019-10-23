@@ -27,4 +27,4 @@ class VacaPlanner extends Component {
         );
     }
 }
-export default connect(null, { newItem })(VacaPlanner);
+export default connect(null, {})(VacaPlanner);

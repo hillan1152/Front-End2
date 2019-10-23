@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
+import { newItem } from './action'
 
 class VacaPlanner extends Component {
 

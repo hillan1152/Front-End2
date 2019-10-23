@@ -1,15 +1,15 @@
 
-/*import {
-    FETCH_Item_START,
-    FETCH_Item_SUCCESS,
-    FETCH_Item_FAILURE,
-    ADD_Item_START,
-    ADD_Item_SUCCESS,
-    ADD_Item_FAILURE,
+import {
+    FETCH_ITEM_START,
+    FETCH_ITEM_SUCCESS,
+    FETCH_ITEM_FAILURE,
+    ADD_ITEM_START,
+    ADD_ITEM_SUCCESS,
+    ADD_ITEM_FAILURE,
     EDIT_ITEM_START,
     EDIT_ITEM_SUCCESS,
     EDIT_ITEM_FAILURE,
-} from './';
+} from '../actions';
 
 const initialState = {
     items:[],
@@ -78,4 +78,4 @@ export const rootReducer = (state = initialState, { type, payload,}) =>{
             default:
                  return state;
     }
-} */
+} 
