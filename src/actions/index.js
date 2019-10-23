@@ -1,30 +1,16 @@
-import { newItem } from './src/store/actions/actions';
-import { connect } from 'react-redux';
-import React, { Component } from 'react';
+import axiosWithAuth from '../utils/axiosWithAuth';
 
-class VacaPlanner extends Component {
+export const AUTHORIZING = "AUTHORIZING";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 
+export const ERROR = "ERROR"
 
-    state = {
-    }
+const baseURL = 'http://bw-vacaplanning.herokuapp.com';
 
-    handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value })
-    }
-    onSubmitHandle = e => {
-        e.preventDefault(); e.preventDefault();
-        this.props.newItem(this.state)
-    }
-    render() {
-        return (
-            <form onSubmit={this.onSubmitHandle}>
-                <input onChange={this.handleChange} name='name' value={this.state.name} />
-                <input onChange={this.handleChange} name='date' value={this.state.date} />
-                <input onChange={this.handleChange} name='description' value={this.state.description} />
-
-                <button>Submit</button>
-            </form>
-        );
-    }
+export const logInUser = (user) => dispatch => {
+    let URL = baseURL + "/login";
+    dispatch({ type: AUTHORIZING, payload: "Logging In..."})
+    axiosWithAuth().post(URL, user)
+        .then(res => dispatch({ type: LOGIN_SUCCESS, payload: res.data.token, user: user.username}))
+        .catch(err => dispatch({type: ERROR, payload: err.response.data.code}))
 }
-export default connect(null, { newItem })(VacaPlanner);
