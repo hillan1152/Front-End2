@@ -1,13 +1,12 @@
+import axios from 'axios';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 export const FETCH_ITEM_START = "FETCH_ITEM_START";
 export const FETCH_ITEM_SUCESS = "FETCH_ITEM_SUCCESS";
 export const FETCH_ITEM_FAILURE = "FETCH_ITEM_FAILURE"
-export const ERROR = "ERROR"
 
-    state = {
-    }
+
 
 export const logInUser = (user) => dispatch => {
     let URL = baseURL + "/login";
