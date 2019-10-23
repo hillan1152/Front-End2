@@ -43,7 +43,7 @@ const FormikAddVacation = withFormik({
     },
 
     handleSubmit(values, { setStatus, resetForm }) {
-        axios.post('https://reqres.in/api/vacation', values)
+        axios.post('https://reqres.in/api/users/', values)
             .then(response => {
                 console.log(response)
                 setStatus(response.data);

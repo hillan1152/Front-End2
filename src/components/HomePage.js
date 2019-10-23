@@ -100,7 +100,7 @@ class App extends Component {
 
     render () {
         return (
-            <Container>
+            <Container >
                 <header className="top">
                     <img className="logoImg" src={Logo} alt="Vacation Planner Logo"/>
                 </header>

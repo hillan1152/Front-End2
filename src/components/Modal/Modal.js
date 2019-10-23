@@ -15,7 +15,6 @@ const modal = (props) => {
                 <div className="modal-header">
                     <img className="logoImg" src={Logo} alt="Vacation Planner Logo"/>
                     <h3>Vacation Planner</h3>
-                    {/* <span className="close-modal-btn" onClick={props.close}>×</span> */}
                 </div>
                 <div className="modal-body">
                     <p>
