@@ -1,14 +1,14 @@
 import React from 'react'
 import AddVacation from "./addVacation";
 import NavBar from "./NavBar";
-// import VacationList from "./VacationList";
+import VacationList from "./VacationList";
 
 function Trips(props) {
     return (
         <div>
             <NavBar />
             <AddVacation />
-            {/* <VacationList /> */}
+            <VacationList />
         </div>
     )
 }

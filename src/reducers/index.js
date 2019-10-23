@@ -38,6 +38,7 @@ export const rootReducer = (state = initialState, { type, payload,}) =>{
                 errors: payload,
                 fetching: false
             };
+
         case ADD_ITEM_START:
             return {
                 ...state,
