@@ -1,65 +1,83 @@
 import React, { useState, useEffect } from 'react'
-import { withFormik, Form, Field } from 'formik';
-import { TextField } from 'formik-material-ui';
-import { Button } from '@material-ui/core';
-import * as Yup from 'yup';
-import axios from 'axios';
-import { axioswithAuth } from '../utils/axiosWithAuth';
+import { connect } from "react-redux";
+import { withFormik, Form, yupToFormErrors } from "formik";
+import * as Yup from "yup";
+import { logInUser } from "../actions";
 
-const LoginForm = ({ values }) => {
-    const [username, setUsername] = useState('');
+const baseURL = 'http://bw-vacaplanning.herokuapp.com';
+
+
+function Login({ history, token }) {
+    const [user, setUser] = useState({ username: '', password: ''});
+
+    useEffect(() => {
+        if(token) {
+            history.push("/addvacation");
+        }
+    }, [history, token])
+
+    const handleChange = e => {
+        setUser({
+            ...user,
+            [e.target.name]: e.target.value
+        });
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        if(user.username&& user.password){
+            setUser({ username:"", password: ""});
+        }
+    };
+
     return (
-        <div>
-            <Form className='formContainer'>
-                <Field
-                    label='Username'
-                    name='username'
-                    type='text'
-                    variant='filled'
-                    margin='normal'
-                    required
-                    fullWidth
-                    component={TextField}
-                />
-                <Field
-                    label='Password'
-                    name='password'
-                    type='password'
-                    variant='filled'
-                    margin='normal'
-                    required
-                    fullWidth
-                    component={TextField}
-                />
-                <Button variant="contained" color="primary" type='submit'>Login</Button>
-            </Form>
+        <div className="login-container">
+            <div className="login-page">
+                <h2>Login</h2>
+                <Form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="User Name"
+                        value={user.username}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="text"
+                        name="password"
+                        placeholder="Password"
+                        value={user.password}
+                        onChange={handleChange}
+                    />
+                    <button>Lets Go!</button>
+                </Form>
+            </div>
         </div>
     )
 }
 
-const FormikLoginForm = withFormik({
-    mapPropsToValues({ username, password }) {
+const LoginWithFormik = withFormik({
+    mapPropsToValues: ({ username, password }) => {
         return {
-            username: username || '',
-            password: password || '',
-        }
+            username: username || "",
+            password: password || ""
+        };
     },
-    validationSchema: Yup.object().shape({
-        username: Yup.string().required('You need to provide a username to login'),
-        password: Yup.string().required('You need to provide a password to login')
-    }),
-    handleSubmit(values, { resetForm }) {
-        axios({
-            method: 'post',
-            url: 'api-login-goes-here',
-            data: {
-                'username': values.username,
-                'password': values.password
-            }
-        })
-        console.log(values);
-        resetForm();
-    }
-})(LoginForm);
 
-export default FormikLoginForm;
+    validationSchema: Yup.object().shape({
+        username: Yup.string("Username is not valid").required(
+            "Username is required"
+        ),
+        password: Yup.string().required("Password is required")
+    })
+})(Login);
+
+const mapStateToProps = state => {
+    return {
+        token: state.token
+    }
+}
+
+export default connect(
+    mapStateToProps, 
+    { logInUser: logInUser })(LoginWithFormik);
