@@ -6,7 +6,7 @@
  import { signUpUser } from "../actions";
  import { Link } from "react-router-dom";
 
- const baseURL = 'http://bw-vacaplanning.herokuapp.com';
+
 
 
  function SignUp({ history, token }) {
@@ -81,15 +81,9 @@
          password: Yup.string().required("Password is required"),
          confirmPassword: Yup.string("Password is not valid").required("Password is required")
      }),
-     handleSubmit(values, {setStatus, resetForm}) { 
-         axios.post('http://bw-vacaplanning.herokuapp.com/roles/role', values) 
-               .then(response => { 
-                   console.log(response)
-                   setStatus(response.data); 
-                   resetForm()
-                 }) 
-               .catch(err => console.log(err.response));
-         }
+     handleSubmit(values,{props}) { //import from action
+        props.signUpUser(values)
+     }
  })(SignUp);
 
  const mapStateToProps = state => {

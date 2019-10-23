@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux";
 import { withFormik, Form } from "formik";
 import * as Yup from "yup";
-// import { logInUser } from "../actions";
+import { logInUser } from "../actions";
 //this is for the link on the button
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ function Login({ history, token }) {
 
     useEffect(() => {
         if (token) {
-            history.push("/addvacation");
+            history.push("/HomePage");
         }
     }, [history, token])
 
@@ -28,6 +28,7 @@ function Login({ history, token }) {
         e.preventDefault();
         if (user.username && user.password) {
             setUser({ username: "", password: "" });
+            
         }
     };
 
@@ -70,8 +71,11 @@ const LoginWithFormik = withFormik({
             "Username is required"
         ),
         password: Yup.string().required("Password is required")
-    })
-})(Login);
+    }),
+     handleSubmit(values, { props }) { //import from action
+         props.logInUser(values)}
+})
+(Login);
 
 const mapStateToProps = state => {
     return {
@@ -81,4 +85,4 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    {})(LoginWithFormik);
+    { logInUser: logInUser })(LoginWithFormik);

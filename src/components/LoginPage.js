@@ -9,7 +9,7 @@ function LoginPage() {
         <div>
             {/* code below is are for routing links if needed */}
             {/* <Link to="/trips"><h1>testing routes</h1></Link> */}
-            <Login />
+            {/* <Login /> */}
         </div>
     )
 }

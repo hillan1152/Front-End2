@@ -63,7 +63,7 @@ export const rootReducer = (state = initialState, { type, payload,}) =>{
                 fetching: true,
                 error: ''
             };
-            case EDIT_ITEM_SUCCESS:
+        case EDIT_ITEM_SUCCESS:
             return {
                 ...state,
                 items: payload,
