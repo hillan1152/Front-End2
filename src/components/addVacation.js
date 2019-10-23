@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from "axios";
 import { withFormik, Form, Field } from "formik";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 
 function AddVacation({ status, props }) {
-    const [vacation, setVacation] = useState([])
+    // const [vacation, setVacation] = useState([])
 
-    useEffect(() => {
-        status && setVacation(vacation => [...vacation, status])
-    }, [status])
+    // useEffect(() => {
+    //     status && setVacation(vacation => [...vacation, status])
+    // }, [status])
     return (
         <div>
 
@@ -20,7 +21,7 @@ function AddVacation({ status, props }) {
                 <button type="submit">Submit!</button>
 
             </Form>
-            <div className="outCont">
+            {/* <div className="outCont">
                 {vacation.map(trip => (
                     <div className="output">
                         <ul key={trip.id}>
@@ -30,7 +31,7 @@ function AddVacation({ status, props }) {
                         </ul>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </div>
     )
 }
@@ -44,9 +45,11 @@ const FormikAddVacation = withFormik({
 
     handleSubmit(values, { setStatus, resetForm }) {
         axios.post('https://reqres.in/api/users/', values)
+
+        
             .then(response => {
                 console.log(response)
-                setStatus(response.data);
+                // setStatus(response.data);
                 resetForm()
             })
             .catch(err => console.log(err.response));
