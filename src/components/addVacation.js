@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { withFormik, Form, Field } from "formik";
 import { Link } from "react-router-dom";
-// import styled from "styled-components";
+
 
 
 function AddVacation({ status, props }) {

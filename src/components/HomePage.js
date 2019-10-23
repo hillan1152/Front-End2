@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
 
 import Modal from './Modal/Modal';
 import Logo from "../img/Logo.png";
@@ -7,28 +6,62 @@ import styled from "styled-components";
 
 const Container = styled.div`
     height: 100vh;
+    width:100%;
 
-    .header {
+    .top {
         background: lightgray;
-        display: flex;
-        padding: 2%;
+        padding: 3%;
+        text-align:left;
+        
+            .logoImg {
+                width: 5rem;
+            }//closes logoImg
+
     }
 
-    /* .cta {
+    .middle {
         display: flex;
+        
+        
+        .leftSide {
+            padding: 20% 5%;
+            width: 50%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-
-        .btnBox {
-            display: flex;
-            justify-content: space-evenly;
-
-            button {
-                font-size: 
+            h2 {
+                font-size: 2rem;
             }
-        }
-    } */
-`;
+            h3 {
+                font-size: 1rem;
+            }
 
+            .open-modal-btn {
+                margin: 5%;
+                width: 40%;
+                border-radius: 7px;
+                background: #83a931;
+                border: 1px solid black;
+
+                &:hover {
+                    
+                    background: white;
+                border: 1px solid #83a931;
+                }//closes the hover
+            }//closes the open-modal-btn
+        }//closes left
+
+        .rightSide {
+            width: 50%;
+            background: darkgray;
+        }//closes right
+
+    }closes middle
+
+   
+
+`;
 
 class App extends Component {
 
@@ -42,51 +75,83 @@ class App extends Component {
 
     openModalHandler = () => {
         this.setState({
-            isShowing: true
+            isShowingModal1: true
         });
+        console.log("Before openModalHandler :")
     }
 
+    openModalHandler2 = () => {
+      this.setState({
+          isShowingModal2: true
+      });
+  }
 
     closeModalHandler = () => {
         this.setState({
-            isShowing: false
+          isShowingModal1: false,
         });
     }
 
+    closeModalHandler2 = () => {
+      this.setState({
+        isShowingModal2: false
+      });
+  }
 
-    render() {
+    render () {
         return (
             <Container>
-                <div className="header" >
-                    <img src={Logo} alt="Vacation Planner Logo" />
-                </div>
-                <section>
-                    <div className="left">
+                <header className="top">
+                    <img className="logoImg" src={Logo} alt="Vacation Planner Logo"/>
+                </header>
+                <div className="middle">
+                    <div className="leftSide">
                         <h2>Vacation Planner</h2>
-                        <h3>Vacation Planning made super Easy!</h3>
+                        <h3>Vacation planning made super easy!</h3>
+                        <div>
+                            { this.state.isShowingModal1 ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
+
+                            { this.state.isShowingModal2 ? <div onClick={this.closeModalHandler2} className="back-drop"></div> : null }
+
+                            <button className="open-modal-btn" onClick={this.openModalHandler}>Sign Up</button>
+
+                            <button className="open-modal-btn" onClick={this.openModalHandler2}>Let's Go!</button>
+
+                            <Modal
+                                className="modal"
+                                show={this.state.isShowingModal1}
+                                close={this.closeModalHandler}>
+                                    Sign Up Form
+                            </Modal>
+
+                            <Modal
+                                className="modal"
+                                show={this.state.isShowingModal2}
+                                close={this.closeModalHandler2}>
+                                    Login Form
+                            </Modal>
+                        </div>
                     </div>
-                    <div className="right">
-
+                    <div className="rightSide">
                     </div>
-
-                    {this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null}
-
-                    <button className="open-modal-btn" onClick={this.openModalHandler}>SignUp</button>
-
-                    <Modal
-                        className="modal"
-                        show={this.state.isShowing}
-                        close={this.closeModalHandler}>
-                        Maybe aircrafts fly very high because they don't want to be seen in plane sight?
-                </Modal>
-                </section>
+                </div>
+                <footer className="footsie">
+                    <h3>About</h3>
+                    {/* <a href="">About</a> */}
+                </footer>
             </Container>
         );
     }
-
 }
 
 export default App;
+
+
+
+
+ 
+
+
 
 
 
