@@ -38,10 +38,44 @@ export const rootReducer = (state = initialState, { type, payload,}) =>{
                 errors: payload,
                 fetching: false
             };
+
+        case ADD_ITEM_START:
+            return {
+                ...state,
+                fetching: true,
+                error: ''
+            };
         case ADD_ITEM_SUCCESS:
             return {
                 ...state,
-                fetching:true
-            }    
+                items: payload,
+                fetching:false,
+                error: ""
+            };    
+        case ADD_ITEM_FAILURE:
+            return {
+                ...state,
+                error: payload
+            };
+        case EDIT_ITEM_START:
+            return {
+                ...state,
+                fetching: true,
+                error: ''
+            };
+            case EDIT_ITEM_SUCCESS:
+            return {
+                ...state,
+                items: payload,
+                fetching:false,
+                error: ""
+            };
+        case EDIT_ITEM_FAILURE:
+            return {
+                ...state,
+                error: payload
+            }
+            default:
+                 return state;
     }
-}
+} */

@@ -1,3 +1,4 @@
+import { newItem } from './src/store/actions/actions';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
@@ -6,7 +7,6 @@ class VacaPlanner extends Component {
 
     state = {
     }
-
 
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value })
@@ -28,4 +28,3 @@ class VacaPlanner extends Component {
     }
 }
 export default connect(null, { newItem })(VacaPlanner);
-
