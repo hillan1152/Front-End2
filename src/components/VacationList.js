@@ -3,17 +3,19 @@ import axios from "axios";
 import VacationCard from "./VacationCard";
 
 function VacationList() {
-    const [place, setPlace] = useState([
+    const [trip, setTrip] = useState([
         { place: 'Hawaii'},
         { place: 'France'},
         { place: 'Thailand'}
 ])
     useEffect(() => {
         axios
-            .get('http://bw-vacaplanning.herokuapp.com/vacations/vacations/{place}')
+            .get(
+                // 'http://bw-vacaplanning.herokuapp.com/vacations/vacations/{place}'
+                )
             .then((response) => {
                 console.log(response);
-                setPlace(response);
+                setTrip(response);
 
             })
             .catch(error => {
@@ -22,14 +24,14 @@ function VacationList() {
     }, []);
     return (
         <div>
-            {/* {place.map((item, id) => {
+            {trip.map((item, id) => {
               return (
                   <VacationCard
                     key={id} 
                     place={item.place}
                   />
               );
-            })} */}
+            })}
         </div>
     )
 }
