@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+
 import Logo from "../../img/Logo.png";
-
-
 import './Modal.css';
-
-
 
 const modal = (props) => {
     return (
@@ -16,12 +13,9 @@ const modal = (props) => {
                     opacity: props.show ? '1' : '0'
                 }}>
                 <div className="modal-header">
-                    <div className="ModalTopText" >
-                        <img src={Logo} alt="Vacation Planner Logo"/>
-                        <h3>Sign Up for Vacation Planner</h3>
-                      </div>  
-                    
-                    <span className="close-modal-btn" onClick={props.close}>×</span>
+                    <img className="logoImg" src={Logo} alt="Vacation Planner Logo"/>
+                    <h3>Vacation Planner</h3>
+                    {/* <span className="close-modal-btn" onClick={props.close}>×</span> */}
                 </div>
                 <div className="modal-body">
                     <p>
@@ -30,7 +24,7 @@ const modal = (props) => {
                 </div>
                 <div className="modal-footer">
                     <button className="btn-cancel" onClick={props.close}>Cancel</button>
-                    <Link to="/trips"><button className="btn-continue">SignUp!</button></Link>
+                 <Link to="/trips"> <button className="btn-continue">CONTINUE</button></Link> 
                 </div>
             </div>
         </div>
