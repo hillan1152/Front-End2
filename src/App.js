@@ -5,6 +5,7 @@ import Trips from "./components/Trips";
 import TripPage from "./components/TripPage";
 import SignUpPage from "./components/SignUpPage";
 import LoginPage from "./components/LoginPage";
+import ProfilePage from "./components/ProfilePage";
 
 
 import './App.css';
@@ -36,6 +37,11 @@ function App() {
       <Route exact path="/login-page"
         render={(props) =>
           <LoginPage {...props} />
+        } />
+
+      <Route exact path="/profile-page"
+        render={(props) =>
+          <ProfilePage {...props} />
         } />
 
     </div>
