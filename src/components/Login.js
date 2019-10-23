@@ -3,28 +3,18 @@ import { connect } from "react-redux";
 import { withFormik, Form, yupToFormErrors } from "formik";
 import * as Yup from "yup";
 import { logInUser } from "../actions";
-<<<<<<< HEAD
-=======
 //this is for the link on the button
 import { Link } from "react-router-dom";
->>>>>>> e8894bd26f940337032d872a1834abc86cfc6c3d
 
 const baseURL = 'http://bw-vacaplanning.herokuapp.com';
 
 
 function Login({ history, token }) {
-<<<<<<< HEAD
-    const [user, setUser] = useState({ username: '', password: ''});
-
-    useEffect(() => {
-        if(token) {
-=======
     const [user, setUser] = useState({ username: '', password: '' });
 
     useEffect(() => {
         if (token) {
->>>>>>> e8894bd26f940337032d872a1834abc86cfc6c3d
-            history.push("/addvacation");
+            history.push("/HomePage");
         }
     }, [history, token])
 
@@ -37,13 +27,9 @@ function Login({ history, token }) {
 
     const handleSubmit = e => {
         e.preventDefault();
-<<<<<<< HEAD
-        if(user.username&& user.password){
-            setUser({ username:"", password: ""});
-=======
         if (user.username && user.password) {
             setUser({ username: "", password: "" });
->>>>>>> e8894bd26f940337032d872a1834abc86cfc6c3d
+            
         }
     };
 
@@ -66,11 +52,7 @@ function Login({ history, token }) {
                         value={user.password}
                         onChange={handleChange}
                     />
-<<<<<<< HEAD
-                    <button>Lets Go!</button>
-=======
                     <Link to="/trips"><button>Lets Go!</button></Link>
->>>>>>> e8894bd26f940337032d872a1834abc86cfc6c3d
                 </Form>
             </div>
         </div>
@@ -90,8 +72,11 @@ const LoginWithFormik = withFormik({
             "Username is required"
         ),
         password: Yup.string().required("Password is required")
-    })
-})(Login);
+    }),
+     handleSubmit(values, { props }) { //import from action
+         props.logInUser(values)}
+})
+(Login);
 
 const mapStateToProps = state => {
     return {
@@ -100,10 +85,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(
-<<<<<<< HEAD
-    mapStateToProps, 
-    { logInUser: logInUser })(LoginWithFormik);
-=======
     mapStateToProps,
     { logInUser: logInUser })(LoginWithFormik);
->>>>>>> e8894bd26f940337032d872a1834abc86cfc6c3d

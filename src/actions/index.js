@@ -1,31 +1,46 @@
+import axios from 'axios';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
-class VacaPlanner extends Component {
+export const FETCH_ITEM_START = "FETCH_ITEM_START";
+export const FETCH_ITEM_SUCCESS = "FETCH_ITEM_SUCCESS";
+export const FETCH_ITEM_FAILURE = "FETCH_ITEM_FAILURE";
 
+export const ADD_ITEM_START = "ADD_ITEM_START";
+export const ADD_ITEM_SUCCESS = "ADD_ITEM_SUCCESS";
+export const ADD_ITEM_FAILURE = "ADD_ITEM_FAILURE";
 
-    state = {
-    }
-
-
-    handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value })
-    }
-    onSubmitHandle = e => {
-        e.preventDefault(); e.preventDefault();
-        this.props.newItem(this.state)
-    }
-    render() {
-        return (
-            <form onSubmit={this.onSubmitHandle}>
-                <input onChange={this.handleChange} name='name' value={this.state.name} />
-                <input onChange={this.handleChange} name='date' value={this.state.date} />
-                <input onChange={this.handleChange} name='description' value={this.state.description} />
-
-                <button>Submit</button>
-            </form>
-        );
-    }
+export const logInUser = (user) => dispatch => {
+    let URL = baseURL + "/login";
+    dispatch({ type: FETCH_ITEM_START, payload: "Logging In..."})
+    axiosWithAuth().post(URL, user)
+        .then(res =>{ dispatch({
+            type: FETCH_ITEM_SUCCESS,
+            payload: res.data
+        })
+    }, true)
+//            console.log(res.data) )
+        .catch(err => dispatch ({type: FETCH_ITEM_FAILURE,payload: err})) 
+           // console.log(err) ) 
+           // .dispatch({type: ERROR, payload: err.response.data.code})
 }
-export default connect(null, { newItem })(VacaPlanner);
 
+export const signUpUser = (user) => dispatch => {
+    let URL = baseURL + "/register";
+    dispatch({
+        type: ADD_ITEM_START})
+        axios
+        .post(URL, user)
+        .then(res =>{ dispatch({
+            type: ADD_ITEM_SUCCESS,
+            payload:res.data
+        })
+    }, true)
+    .catch(err => dispatch({type:ADD_ITEM_FAILURE, payload:err}))
+//            console.log(res.data)
+//        })
+//       .catch(err =>
+//            console.log(err)
+//             .dispatch({ type:ERROR, payload: err.response.data.code}))
+}
+    
