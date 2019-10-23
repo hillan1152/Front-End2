@@ -6,14 +6,14 @@ import TripPage from "./components/TripPage";
 import SignUpPage from "./components/SignUpPage";
 import LoginPage from "./components/LoginPage";
 import ProfilePage from "./components/ProfilePage";
-
+import SignUp from './components/SignUp'
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-
+      {/* <SignUp/> */}
       <Route exact path="/"
         render={(props) =>
           <HomePage {...props} />

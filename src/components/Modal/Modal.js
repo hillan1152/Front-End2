@@ -18,9 +18,7 @@ const modal = (props) => {
                     <h3>Vacation Planner</h3>
                 </div>
                 <div className="modal-body">
-                    <p>
                     <Login/>
-                    </p>
                 </div>
                 <div className="modal-footer">
                     <button className="btn-cancel" onClick={props.close}>Cancel</button>
