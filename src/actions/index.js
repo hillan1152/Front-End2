@@ -3,17 +3,19 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 export const FETCH_ITEM_START = "FETCH_ITEM_START";
-export const FETCH_ITEM_SUCESS = "FETCH_ITEM_SUCCESS";
-export const FETCH_ITEM_FAILURE = "FETCH_ITEM_FAILURE"
+export const FETCH_ITEM_SUCCESS = "FETCH_ITEM_SUCCESS";
+export const FETCH_ITEM_FAILURE = "FETCH_ITEM_FAILURE";
 
-
+export const ADD_ITEM_START = "ADD_ITEM_START";
+export const ADD_ITEM_SUCCESS = "ADD_ITEM_SUCCESS";
+export const ADD_ITEM_FAILURE = "ADD_ITEM_FAILURE";
 
 export const logInUser = (user) => dispatch => {
     let URL = baseURL + "/login";
     dispatch({ type: FETCH_ITEM_START, payload: "Logging In..."})
     axiosWithAuth().post(URL, user)
         .then(res =>{ dispatch({
-            type: FETCH_ITEM_SUCESS,
+            type: FETCH_ITEM_SUCCESS,
             payload: res.data
         })
     }, true)
@@ -26,14 +28,19 @@ export const logInUser = (user) => dispatch => {
 export const signUpUser = (user) => dispatch => {
     let URL = baseURL + "/register";
     dispatch({
-        type: FETCH_ITEM_START})
+        type: ADD_ITEM_START})
         axios
         .post(URL, user)
-        .then(res =>{
-            console.log(res.data)
+        .then(res =>{ dispatch({
+            type: ADD_ITEM_SUCCESS,
+            payload:res.data
         })
-        .catch(err =>
-            console.log(err)
-             .dispatch({ type:ERROR, payload: err.response.data.code}))
+    }, true)
+    .catch(err => dispatch({type:ADD_ITEM_FAILURE, payload:err}))
+//            console.log(res.data)
+//        })
+//       .catch(err =>
+//            console.log(err)
+//             .dispatch({ type:ERROR, payload: err.response.data.code}))
 }
     
