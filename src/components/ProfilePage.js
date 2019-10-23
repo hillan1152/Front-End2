@@ -7,7 +7,7 @@ function ProfilePage() {
     return (
         <div>
             <ProfileList />
-            < ProfileForm/>
+            <ProfileForm/>
              "<Link to="/trips">Trips</Link>"
         </div>
     )

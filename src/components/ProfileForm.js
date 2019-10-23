@@ -9,7 +9,7 @@ function ProfileForm() {
         <div>
             <Form>
                 <Field type="text" name="name" placeholder="Name" /><br />
-                <Field type="text" name="location" placeholder="city" /><br />
+                {/* <Field type="text" name="location" placeholder="city" /><br />
                 <Field
                     component="textarea"
                     type="text"
@@ -21,7 +21,7 @@ function ProfileForm() {
                     type="text"
                     name="idealExperience"
                     placeholder="Ideal Experience"
-                /><br />
+                /><br /> */}
 
                 <button type="submit">Submit!</button>
 
@@ -34,9 +34,9 @@ const FormikProfileForm = withFormik({
     mapPropsToValues({ name, location, bio, idealExperience  }) {
         return {
             name: name || "",
-            location: location || "",
-            bio: bio || "",
-            idealExperience: idealExperience || ""
+            // location: location || "",
+            // bio: bio || "",
+            // idealExperience: idealExperience || ""
         };
     },
 

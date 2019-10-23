@@ -36,9 +36,9 @@ function VacationList() {
                     <ProfileCard
                         key={id} 
                         name={item.name}
-                        location={item.location}
-                        bio={item.bio}
-                        idealExperience={item.idealExperience}
+                        // location={item.location}
+                        // bio={item.bio}
+                        // idealExperience={item.idealExperience}
                     />
                 );
                 })}
