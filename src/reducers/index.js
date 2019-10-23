@@ -1,21 +1,47 @@
-import { AUTHORIZING, LOGIN_SUCCESS, ERROR } from '../actions'
+
+/*import {
+    FETCH_Item_START,
+    FETCH_Item_SUCCESS,
+    FETCH_Item_FAILURE,
+    ADD_Item_START,
+    ADD_Item_SUCCESS,
+    ADD_Item_FAILURE,
+    EDIT_ITEM_START,
+    EDIT_ITEM_SUCCESS,
+    EDIT_ITEM_FAILURE,
+} from './';
 
 const initialState = {
-    username: localStorage.getItem('username'),
-    token: localStorage.getItem('token'),
-    isFetching: false,
-
+    items:[],
+    errors:"",
+    isFetching: false
 }
 
-
-export const reducer = ( state = initialState, action) => {
-    switch(action.type){
-        case AUTHORIZING:
-            return{...state, isFetching: true, fetching_message: action.payload}
-        case LOGIN_SUCCESS:
-            localStorage.setItem('token')
-            
-        default: 
-            return state;
+export const rootReducer = (state = initialState, { type, payload,}) =>{
+    switch (type) {
+        case FETCH_ITEM_START:
+            return {
+                ...state,
+                errors:"",
+                fetching:true
+            };
+        case FETCH_ITEM_SUCCESS:
+            return{
+                ...state,
+                errors:"",
+                items: payload,
+                fetching: false
+            };
+        case FETCH_ITEM_FAILURE:
+            return {
+                ...state,
+                errors: payload,
+                fetching: false
+            };
+        case ADD_ITEM_SUCCESS:
+            return {
+                ...state,
+                fetching:true
+            }    
     }
 }
