@@ -1,31 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import Modal from './Modal/Modal';
-import Login from './Login';
-import SignUp from './SignUp';
+import Login from './Auth/Login';
+import SignUp from './Auth/SignUp';
+import Header from './HeaderFront';
+import Footer from './Footer';
 
-import Logo from "../img/Logo.png";
+// import Logo from "../img/Logo.png";
 import styled from "styled-components";
 
 const Container = styled.div`
     height: 100vh;
     width:100%;
 
-    .top {
-        background: lightgray;
-        padding: 3%;
-        text-align:left;
-        
-            .logoImg {
-                width: 5rem;
-            }//closes logoImg
-
-    }
 
     .middle {
         display: flex;
-        height: 85vh;
+        height: 83vh;
         
         
         .leftSide {
@@ -37,10 +29,10 @@ const Container = styled.div`
 
             h2 {
                 font-size: 2rem;
-            }
+            }//closes
             h3 {
                 font-size: 1rem;
-            }
+            }//closes
 
             button {
                 margin: 5%;
@@ -60,7 +52,7 @@ const Container = styled.div`
             .cancel {
                 background: red;
                 width: 20%;
-            }
+            }//closes cncl
 
 
         }//closes lft
@@ -71,23 +63,6 @@ const Container = styled.div`
         }//closes right
 
     }//closes middle
-
-    footer {
-        background: lightgray;
-        padding: 1%;
-        text-align: left;
-        display:flex;
-        flex-direction: column;
-        
-        .links {
-            margin: .5%;
-            text-decoration: none;
-            color: black;
-            
-        }
-        
-    }
-   
 
 `;
 
@@ -101,9 +76,7 @@ function App() {
     // render () {
         return (
             <Container >
-                <header className="top">
-                    <img className="logoImg" src={Logo} alt="Vacation Planner Logo"/>
-                </header>
+               <Header />
                 <div className="middle">
                     <div className="leftSide">
                         <h2>Vacation Planner</h2>
@@ -129,12 +102,7 @@ function App() {
                     <div className="rightSide">
                     </div>
                 </div>
-                <footer className="footsie">
-                    <Link to="/about-page" className="links
-                    ">about</Link><br/>
-                    <Link to="/site-map-page"className="links
-                    ">site map</Link>
-                </footer>
+                <Footer />
             </Container>
         );
     }
