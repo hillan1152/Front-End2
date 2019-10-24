@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Footer from './Footer';
-import Header from './HeaderFront';
+import Header from '../Navigation/HeaderFront';
 
-import SMapImg from '../img/siteMap.png';
+import SMapImg from '../../img/siteMap.png';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -33,13 +33,13 @@ function SiteMap() {
     return (
         <Container >
             <Header />
-                
-                <div className="middle" >
-                    <h2>Site Map</h2>
-                    <img src={SMapImg}  alt="" />
-                </div>
+
+            <div className="middle" >
+                <h2>Site Map</h2>
+                <img src={SMapImg} alt="" />
+            </div>
             <Footer />
-    </Container>
+        </Container>
     )
 }
 

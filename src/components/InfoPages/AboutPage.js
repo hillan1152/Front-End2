@@ -1,18 +1,18 @@
 import React from 'react';
 
 import Footer from './Footer';
-import Header from './HeaderFront';
+import Header from '../Navigation/HeaderFront';
 
 
-import Damon from '../img/damon.jpeg';
-import Manuel from '../img/manuel.jpeg';
-import Nabia from '../img/nabia.jpeg';
-import April from '../img/april.jpg';
-import Jeremy from '../img/jeremy.jpg';
-import Anthony from '../img/Anthony.png';
-import Kenneth from '../img/kenneth.jpg';
-import Diana from '../img/diana.jpeg';
-import Christina from '../img/Christina.png';
+import Damon from '../../img/damon.jpeg';
+import Manuel from '../../img/manuel.jpeg';
+import Nabia from '../../img/nabia.jpeg';
+import April from '../../img/april.jpg';
+import Jeremy from '../../img/jeremy.jpg';
+import Anthony from '../../img/Anthony.png';
+import Kenneth from '../../img/kenneth.jpg';
+import Diana from '../../img/diana.jpeg';
+import Christina from '../../img/Christina.png';
 
 
 
@@ -149,6 +149,7 @@ function About() {
                     </div>
                     
                 </div>
+            
             <Footer />
         </Container>
     )

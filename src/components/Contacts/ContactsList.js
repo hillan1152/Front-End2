@@ -9,7 +9,7 @@ function ContactList() {
         axios
             .get(
                 'http://bw-vacaplanning.herokuapp.com/users/users/all'
-                )
+            )
             .then((response) => {
                 console.log(response);
                 // setPerson(response.data);
@@ -21,15 +21,15 @@ function ContactList() {
     }, []);
     return (
         <div>
-            {person.map((item, userName ) => {
-              return (
-                  
-                  <ContactCard
-                    key={userName} 
-                    name={item.username}
-                  />
-                 
-              );
+            {person.map((item, userName) => {
+                return (
+
+                    <ContactCard
+                        key={userName}
+                        name={item.username}
+                    />
+
+                );
             })}
         </div>
     )

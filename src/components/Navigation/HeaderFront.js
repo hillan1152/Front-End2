@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Logo from "../img/Logo.png";
+import Logo from "../../img/Logo.png";
 import styled from "styled-components";
 
 const Cabeza = styled.div`
@@ -17,7 +17,7 @@ const Cabeza = styled.div`
 function HeaderFront() {
     return (
         <Cabeza>
-            <img className="logoImg" src={Logo} alt="Vacation Planner Logo"/>
+            <img className="logoImg" src={Logo} alt="Vacation Planner Logo" />
         </Cabeza>
     )
 }
