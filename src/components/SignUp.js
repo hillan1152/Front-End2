@@ -43,7 +43,7 @@ export function SignUp({ history, token }) {
 
      useEffect(() => {
          if(token) {
-             history.push("/vacations/newvaca");
+             history.push("/vacations");
          }
      }, [history, token])
 
