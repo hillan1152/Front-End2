@@ -3,8 +3,6 @@ import { Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Trips from "./components/Trips";
 import TripPage from "./components/TripPage";
-
-
 import ProfilePage from "./components/ProfilePage";
 
 
@@ -13,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <SignUp/> */}
+
       <Route exact path="/"
         render={(props) =>
           <HomePage {...props} />
