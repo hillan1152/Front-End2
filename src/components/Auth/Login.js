@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux";
 import { withFormik, Form } from "formik";
 import * as Yup from "yup";
-import { logInUser } from "../actions";
+import { logInUser } from "../../actions";
 //this is for the link on the button
 import { Link } from "react-router-dom";
 
