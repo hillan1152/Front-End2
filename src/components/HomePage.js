@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 import Modal from './Modal/Modal';
-import Logo from "../img/Logo.png";
-import styled from "styled-components";
+import Login from './Login';
+import SignUp from './SignUp';
+
+import Logo from '../img/Logo.png';
+import styled from 'styled-components';
 
 const Container = styled.div`
     height: 100vh;
@@ -122,6 +125,7 @@ class App extends Component {
                                 show={this.state.isShowingModal1}
                                 close={this.closeModalHandler}>
                                     Sign Up Form
+                                    <SignUp />
                             </Modal>
 
                             <Modal
@@ -129,6 +133,7 @@ class App extends Component {
                                 show={this.state.isShowingModal2}
                                 close={this.closeModalHandler2}>
                                     Login Form
+                                    <Login />
                             </Modal>
                         </div>
                     </div>
