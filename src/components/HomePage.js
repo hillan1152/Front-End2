@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Modal from './Modal/Modal';
 import Login from './Login';
@@ -24,6 +25,7 @@ const Container = styled.div`
 
     .middle {
         display: flex;
+        height: 85vh;
         
         
         .leftSide {
@@ -31,7 +33,7 @@ const Container = styled.div`
             width: 50%;
             display:flex;
             flex-direction: column;
-            justify-content: space-between;
+            /* justify-content: space-between; */
 
             h2 {
                 font-size: 2rem;
@@ -68,8 +70,23 @@ const Container = styled.div`
             background: darkgray;
         }//closes right
 
-    }closes middle
+    }//closes middle
 
+    footer {
+        background: lightgray;
+        padding: 1%;
+        text-align: left;
+        display:flex;
+        flex-direction: column;
+        
+        .links {
+            margin: .5%;
+            text-decoration: none;
+            color: black;
+            
+        }
+        
+    }
    
 
 `;
@@ -113,8 +130,10 @@ function App() {
                     </div>
                 </div>
                 <footer className="footsie">
-                    <h3>About</h3>
-                    {/* <a href="">About</a> */}
+                    <Link to="/about-page" className="links
+                    ">about</Link><br/>
+                    <Link to="/site-map-page"className="links
+                    ">site map</Link>
                 </footer>
             </Container>
         );

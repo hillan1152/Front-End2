@@ -18,7 +18,7 @@ const Header = styled.div`
 function NavBar() {
     return (
         <Header>
-            <img src={Logo} />
+            <img src={Logo} alt="" />
             <NavModalPage />
         </Header>
     )
