@@ -7,7 +7,7 @@ import Header from './HeaderFront';
 import Damon from '../img/damon.jpeg';
 import Manuel from '../img/manuel.jpeg';
 import Nabia from '../img/nabia.jpeg';
-import April from '../img/april.jpeg';
+import April from '../img/april.jpg';
 import Jeremy from '../img/jeremy.jpg';
 import Anthony from '../img/Anthony.png';
 import Kenneth from '../img/kenneth.jpg';
