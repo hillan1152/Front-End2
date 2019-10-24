@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from "./NavBar";
-import Comments from "./Comments";
+import Comments from "./Comment/Comments";
 import ContactsList from "./ContactsList"
 import styled from "styled-components";
 
@@ -27,10 +27,10 @@ function TripPage() {
                     <ContactsList />
                 </div>
                 <div className="right">
-                    <Comments /> 
+                    <Comments />
                 </div>
             </Center>
-            
+
         </div>
     )
 }
