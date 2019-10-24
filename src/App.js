@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import Trips from "./components/Trips";
-import TripPage from "./components/TripPage";
-import ProfilePage from "./components/ProfilePage";
-import AboutPage from "./components/AboutPage";
-import SiteMapPage from "./components/SiteMapPage";
+import HomePage from "./components/InfoPages/HomePage";
+import Trips from "./components/Trip/Trips";
+import TripPage from "./components/Trip/TripPage";
+import ProfilePage from "./components/Profile/ProfilePage";
+import AboutPage from "./components/InfoPages/AboutPage";
+import SiteMapPage from "./components/InfoPages/SiteMapPage";
 
 
 import './App.css';

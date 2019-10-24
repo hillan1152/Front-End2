@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Footer from './Footer';
-import Header from './HeaderFront';
+import Header from '../Navigation/HeaderFront';
 
 
 import styled from "styled-components";
@@ -22,14 +22,14 @@ function About() {
     return (
         <Container >
             <Header />
-                <div className="middle">
-                    <div class="card">
-                        <h3>Jeremy McWilliams</h3>
-                        <img src="./handles/Jeremy.jpg" alt="Jeremy"/>
-                        <h5>Web UI</h5>
-                        <a href="https://github.com/J2Macwilliams"><img/></a>
-                    </div>
+            <div className="middle">
+                <div class="card">
+                    <h3>Jeremy McWilliams</h3>
+                    <img src="./handles/Jeremy.jpg" alt="Jeremy" />
+                    <h5>Web UI</h5>
+                    <a href="https://github.com/J2Macwilliams"><img /></a>
                 </div>
+            </div>
             <Footer />
         </Container>
     )

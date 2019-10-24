@@ -1,9 +1,9 @@
 import React from 'react'
 
-import NavBar from "./NavBar";
-import Comments from "./Comment/Comments";
-import ContactsList from "./ContactsList"
-import Footer from './Footer';
+import NavBar from "../Navigation/NavBar";
+import Comments from "../Comment/Comments";
+import ContactsList from "../Contacts/ContactsList";
+import Footer from '../InfoPages/Footer';
 
 import styled from "styled-components";
 
@@ -33,11 +33,7 @@ function TripPage() {
                     <Comments />
                 </div>
             </Center>
-<<<<<<< HEAD
-
-=======
             <Footer />
->>>>>>> 007772a9953afed732fc2d5d273e90031001352c
         </div>
     )
 }
