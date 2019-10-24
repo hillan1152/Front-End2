@@ -6,7 +6,7 @@
 
 //     useEffect(() => {
 //         axios
-//             .get('http://bw-vacaplanning.herokuapp.com')
+//             .get('http://bw-vacaplanning.herokuapp.com/comments/')
 //             .then((response) => {
 //                 // console.log(response);
 //                 setPeopleData(response);

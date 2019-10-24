@@ -5,13 +5,15 @@ import * as Yup from "yup";
 import { logInUser } from "../actions";
 //this is for the link on the button
 import { Link } from "react-router-dom";
+import axiosWithAuth from '../utils/axiosWithAuth';
+
 
 
 
 function Login({ history, token }) {
     const [user, setUser] = useState({ username: '', password: '' });
 
-    useEffect(() => {
+    useEffect((e) => {
         if (token) {
             history.push("/HomePage");
         }
@@ -26,6 +28,11 @@ function Login({ history, token }) {
 
     const handleSubmit = e => {
         e.preventDefault();
+        axiosWithAuth().post('/login', user)
+            .then(res => {
+                localStorage.setItem('token', res.data.token);
+                this.props.history.push('/HomePage')
+            })
         if (user.username && user.password) {
             setUser({ username: "", password: "" });
             
@@ -74,8 +81,7 @@ const LoginWithFormik = withFormik({
     }),
      handleSubmit(values, { props }) { //import from action
          props.logInUser(values)}
-})
-(Login);
+})(Login);
 
 const mapStateToProps = state => {
     return {
