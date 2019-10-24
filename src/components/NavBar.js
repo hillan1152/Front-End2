@@ -17,7 +17,6 @@ const Header = styled.div`
 function NavBar() {
     return (
         <Header>
-           
             <NavModalPage />
         </Header>
     )
