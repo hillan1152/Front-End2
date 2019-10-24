@@ -8,7 +8,6 @@ import styled from "styled-components";
 
 const ProfIcon = styled.div`
 border-radius: 50%;
-background-color: rgba(0,0,0,0);
 margin: 0;
 padding: 0;
 // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
