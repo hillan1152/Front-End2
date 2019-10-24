@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Login from '../Login';
 
 import Logo from "../../img/Logo.png";
 import './Modal.css';
@@ -17,9 +18,7 @@ const modal = (props) => {
                     <h3>Vacation Planner</h3>
                 </div>
                 <div className="modal-body">
-                    <p>
-                        {props.children}
-                    </p>
+                    <Login/>
                 </div>
                 <div className="modal-footer">
                     <button className="btn-cancel" onClick={props.close}>Cancel</button>

@@ -9,7 +9,7 @@
 
 
 
- function SignUp({ history, token }) {
+export function SignUp({ history, token }) {
      const [user, setUser] = useState({ username: '', password: ''});
 
      useEffect(() => {
@@ -27,7 +27,7 @@
 
      const handleSubmit = e => {
          e.preventDefault();
-         if(user.username&& user.password){
+         if(user.username && user.password){
              setUser({ username:"", password: ""});
          }
      };
@@ -51,13 +51,13 @@
                          value={user.password}
                          onChange={handleChange}
                      />
-                      <input
+                      {/* <input
                          type="password"
                          name="confirmPassword"
                          placeholder="Confirm Password"
                          value={user.password}
                          onChange={handleChange}
-                     />
+                     /> */}
                       <Link to="/trips"><button>Sign Up</button></Link>
                  </Form>
              </div>
