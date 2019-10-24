@@ -8,7 +8,7 @@ function ContactList() {
     useEffect(() => {
         axios
             .get(
-                'http://bw-vacaplanning.herokuapp.com/users/users'
+                'http://bw-vacaplanning.herokuapp.com/users/users/all'
                 )
             .then((response) => {
                 console.log(response);

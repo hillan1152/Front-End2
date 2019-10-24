@@ -31,7 +31,7 @@ function UserForm({ status }) {
                     <div className="output">
                         <ul key={words.id}>
 
-                            <li>{words.commentary}</li>
+                            <li>{words.details}</li>
                         </ul>
                     </div>
                 ))}
@@ -60,7 +60,7 @@ const FormikUserForm = withFormik({
     },
 
     handleSubmit(values, { setStatus, resetForm }) {
-        axios.post('https://reqres.in/api/comments', values)
+        axios.post('http://bw-vacaplanning.herokuapp.com/comments/newcom', values)
             .then(response => {
                 console.log(response)
                 setStatus(response.data);

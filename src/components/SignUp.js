@@ -39,11 +39,11 @@
 
 
 export function SignUp({ history, token }) {
-     const [user, setUser] = useState({ username: '', password: ''});
+     const [user, setUser] = useState({ username: '', password: '', confirmPassword:'', email: ''});
 
      useEffect(() => {
          if(token) {
-             history.push("/addvacation");
+             history.push("/vacations");
          }
      }, [history, token])
 
@@ -57,7 +57,7 @@ export function SignUp({ history, token }) {
      const handleSubmit = e => {
          e.preventDefault();
          if(user.username && user.password){
-             setUser({ username:"", password: ""});
+             setUser({ username:"", password: "", confirmPassword:"", email: ""});
          }
      };
 
@@ -74,6 +74,13 @@ export function SignUp({ history, token }) {
                          onChange={handleChange}
                      /><br/>
                      <input
+                         type="text"
+                         name="email"
+                         placeholder="Email"
+                         value={user.email}
+                         onChange={handleChange}
+                    />
+                     <input
                          type="password"
                          name="password"
                          placeholder="Password"
@@ -84,7 +91,7 @@ export function SignUp({ history, token }) {
                          type="password"
                          name="confirmPassword"
                          placeholder="Confirm Password"
-                         value={user.password}
+                         value={user.confirmPassword}
                          onChange={handleChange}
                      /><br/>
                       <Link to="/trips"><button>Sign Up</button></Link>
