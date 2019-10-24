@@ -9,7 +9,7 @@ const Header = styled.div`
  width: 100%;
  padding: 2%;
  border-bottom: 2px solid black;
- margin-bottom: 1%;
+//  margin-bottom: 1%;
  
 
 `;
