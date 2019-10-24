@@ -1,12 +1,14 @@
 import React from 'react';
 
-
 import Logo from "../../img/Logo.png";
 import './Modal.css';
 
+import styled from 'styled-components';
+
+
+
 const modal = (props) => {
     return (
-        <div>
             <div className="modal-wrapper"
                 style={{
                     transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
@@ -24,7 +26,6 @@ const modal = (props) => {
                 
                 </div>
             </div>
-        </div>
     )
 }
 

@@ -27,11 +27,11 @@ const Container = styled.div`
         
         
         .leftSide {
-            padding: 20% 5%;
+            /* padding: 20% 5%; */
             width: 50%;
-            display:flex;
+            /* display:flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-between; */
 
             h2 {
                 font-size: 2rem;
@@ -111,7 +111,7 @@ class App extends Component {
                     <div className="leftSide">
                         <h2>Vacation Planner</h2>
                         <h3>Vacation planning made super easy!</h3>
-                        <div>
+                        
                             { this.state.isShowingModal1 ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
 
                             { this.state.isShowingModal2 ? <div onClick={this.closeModalHandler2} className="back-drop"></div> : null }
@@ -135,7 +135,8 @@ class App extends Component {
                                    
                                     <Login />
                             </Modal>
-                        </div>
+                        
+                        
                     </div>
                     <div className="rightSide">
                     </div>
