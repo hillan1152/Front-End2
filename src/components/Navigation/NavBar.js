@@ -1,7 +1,7 @@
 import React from 'react';
 import NavModalPage from "./NavModalPage";
 import styled from "styled-components";
-import Logo from "../img/Logo.svg";
+import Logo from "../../img/Logo.svg";
 
 const Header = styled.div`
  display: flex;

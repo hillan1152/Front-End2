@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import ReactDOM from "react-dom";
-import profIcon from "../img/profIcon.svg";
-import Modal from "./Modal/Modal";
+import profIcon from "../../img/profIcon.svg";
+import Modal from "../Modal/Modal";
 import styled from "styled-components";
 
 // import "./styles.css";
