@@ -43,14 +43,14 @@ function Login({ history, token }) {
                         placeholder="User Name"
                         value={user.username}
                         onChange={handleChange}
-                    />
+                    /><br/>
                     <input
                         type="text"
                         name="password"
                         placeholder="Password"
                         value={user.password}
                         onChange={handleChange}
-                    />
+                    /><br/>
                     <Link to="/trips"><button>Lets Go!</button></Link>
                 </Form>
             </div>
