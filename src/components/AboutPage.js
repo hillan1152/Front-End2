@@ -21,10 +21,10 @@ const Container = styled.div`
 function About() {
     return (
         <Container >
-                <header className="top">
-                    <img className="logoImg" src={Logo} alt="Vacation Planner Logo"/>
-                </header>
-                </Container>
+            <header className="top">
+                <img className="logoImg" src={Logo} alt="Vacation Planner Logo" />
+            </header>
+        </Container>
     )
 }
 

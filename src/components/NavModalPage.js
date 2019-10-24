@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 // import ReactDOM from "react-dom";
-
+// import profIcon from "../img/profIcon";
 import Modal from "./Modal/Modal";
+import styled from "styled-components";
 
 // import "./styles.css";
 
+const ProfIcon = styled.div`
+border-radius: 5px;
+
+ `;
+
 function App() {
   const [isModalOpen, toggleModal] = useState(false);
-//   const [isModalOpen2, toggleModal2] = useState(false);
+  //   const [isModalOpen2, toggleModal2] = useState(false);
   return (
     <div className="App">
       {/* <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2> */}
-      <button onClick={() => toggleModal(!isModalOpen)}>Sign Up</button>
+
+      <ProfIcon
+        onClick={() => toggleModal(!isModalOpen)}>test
+      </ProfIcon>
+
       {/* <button onClick={() => toggleModal2(!isModalOpen2)}>Let's Go!</button> */}
 
       <Modal isOpen={isModalOpen} toggle={toggleModal}>
@@ -25,7 +35,7 @@ function App() {
         <p>Other text that describes what is happening</p>
         <button onClick={() => toggleModal2(false)}>toggle</button>
       </Modal> */}
-      
+
     </div>
   );
 }
