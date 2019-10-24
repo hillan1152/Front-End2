@@ -1,7 +1,10 @@
 import React from 'react'
-import NavBar from "./NavBar";
-import Comments from "./Comments";
-import ContactsList from "./ContactsList"
+
+import NavBar from "../Navigation/NavBar";
+import Comments from "../Comment/Comments";
+import ContactsList from "../Contacts/ContactsList";
+import Footer from '../InfoPages/Footer';
+
 import styled from "styled-components";
 
 const Center = styled.div`
@@ -27,10 +30,10 @@ function TripPage() {
                     <ContactsList />
                 </div>
                 <div className="right">
-                    <Comments /> 
+                    <Comments />
                 </div>
             </Center>
-            
+            <Footer />
         </div>
     )
 }

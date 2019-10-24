@@ -9,7 +9,7 @@
 //             .get('http://bw-vacaplanning.herokuapp.com/comments/')
 //             .then((response) => {
 //                 // console.log(response);
-//                 setPeopleData(response);
+//                 setData(response);
 
 //             })
 //             .catch(error => {
@@ -24,14 +24,3 @@
 //         </div>
 //     );
 // }
-
-// const CommentCard = (props) => {
-//     return (
-//         <div>
-//             <h2>{props.name}</h2>
-//             <p>{props.comment}</p>
-//         </div>
-//     );
-// };
-
-// export default CommentCard;
