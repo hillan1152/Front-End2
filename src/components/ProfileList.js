@@ -17,7 +17,7 @@ function VacationList() {
     useEffect(() => {
         axios
             .get(
-                // 'http://bw-vacaplanning.herokuapp.com/vacations/vacations/{place}'
+                `http://bw-vacaplanning.herokuapp.com/vacations/vacations/${place}`
                 )
             .then((response) => {
                 console.log(response);
