@@ -2,39 +2,55 @@ import React from 'react'
 
 import NavBar from "../Navigation/NavBar";
 import Comments from "../Comment/Comments";
+import CommentList from "../Comment/CommentList";
 import ContactsList from "../Contacts/ContactsList";
 import Footer from '../InfoPages/Footer';
 
 import styled from "styled-components";
 
-const Center = styled.div`
-    width: 100%;
-    display: flex;
+const Container = styled.div`
+    height: 100vh;
+    width:100%;
 
-    .left {
-        width: 20%;
-    }
-    .right {
-        width: 70%;
-        background: lightgray;
-    }
+    .middle {
+        display: flex;
+        height: 83vh;
 
+        .left {
+            width: 20%;
+            background:black;
+        }
+        .right {
+            width: 80%;
+            border: 10px solid #83a931;
+
+            .output {
+                height: 75.4vh;
+                background: gray;
+                
+            }
+        }
+    }
 `;
+
 
 function TripPage() {
     return (
-        <div>
+        <Container>
             <NavBar />
-            <Center>
+            <div className="middle">
                 <div className="left">
                     <ContactsList />
                 </div>
                 <div className="right">
+                    <div className="output">
+                        <CommentList />
+                    </div>
                     <Comments />
                 </div>
-            </Center>
+            </div>
             <Footer />
-        </div>
+        </Container>
     )
 }
 

@@ -4,6 +4,7 @@ import NavBar from "../Navigation/NavBar";
 import VacationList from "../Vacation/VacationList";
 import Footer from '../InfoPages/Footer';
 
+
 function Trips(props) {
     return (
         <div>
