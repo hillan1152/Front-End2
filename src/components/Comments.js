@@ -31,7 +31,7 @@ function UserForm({ status }) {
                     <div className="output">
                         <ul key={words.id}>
 
-                            <li>{words.commentary}</li>
+                            <li>{words.details}</li>
                         </ul>
                     </div>
                 ))}
