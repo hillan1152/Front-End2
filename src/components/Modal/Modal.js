@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import Login from '../Login';
 
 import Logo from "../../img/Logo.png";
 import './Modal.css';
 
+import styled from 'styled-components';
+
+
+
 const modal = (props) => {
     return (
-        <div>
             <div className="modal-wrapper"
                 style={{
                     transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
@@ -18,14 +19,13 @@ const modal = (props) => {
                     <h3>Vacation Planner</h3>
                 </div>
                 <div className="modal-body">
-                    <Login/>
+                    {props.children}
                 </div>
                 <div className="modal-footer">
                     <button className="btn-cancel" onClick={props.close}>Cancel</button>
-                 <Link to="/trips"> <button className="btn-continue">CONTINUE</button></Link> 
+                
                 </div>
             </div>
-        </div>
     )
 }
 

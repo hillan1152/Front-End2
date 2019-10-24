@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 import VacationCard from "./VacationCard";
 
 function VacationList() {
-    const [trip, setTrip] = useState([
-        // { place: 'Hawaii'},
-        // { place: 'France'},
-        // { place: 'Thailand'}
-])
+    const [trip, setTrip] = useState([])
     useEffect(() => {
         axios
             .get(

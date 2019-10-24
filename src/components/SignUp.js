@@ -5,7 +5,36 @@
  import * as Yup from "yup";
  import { signUpUser } from "../actions";
  import { Link } from "react-router-dom";
+ import styled from 'styled-components';
 
+ const Interior = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 2%;
+        }
+        input {
+            margin: 2.5%;
+            border: 1px solid black;
+            font-size: .8rem;
+        }
+        button {
+            width: 50%;
+            background: #83a931;
+            font-size: 1rem;
+            border: 1px solid black;
+            border-radius: 6px;
+
+            &:hover {
+                background: white;
+                border: 1px solid #83a931;
+            }
+        }
+ `;
 
 
 
@@ -33,7 +62,7 @@ export function SignUp({ history, token }) {
      };
 
      return (
-         <div className="signUp-container">
+         <Interior>
              <div className="signUp-page">
                  <h2>Sign Up</h2>
                  <Form onSubmit={handleSubmit}>
@@ -51,17 +80,17 @@ export function SignUp({ history, token }) {
                          value={user.password}
                          onChange={handleChange}
                      />
-                      {/* <input
+                      <input
                          type="password"
                          name="confirmPassword"
                          placeholder="Confirm Password"
                          value={user.password}
                          onChange={handleChange}
-                     /> */}
+                     /><br/>
                       <Link to="/trips"><button>Sign Up</button></Link>
                  </Form>
              </div>
-         </div>
+         </Interior>
      )
  }
 

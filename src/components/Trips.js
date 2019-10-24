@@ -1,5 +1,5 @@
 import React from 'react'
-import AddVacation from "./addVacation";
+import VacationForm from "./VacationForm";
 import NavBar from "./NavBar";
 import VacationList from "./VacationList";
 
@@ -7,7 +7,7 @@ function Trips(props) {
     return (
         <div>
             <NavBar />
-            <AddVacation />
+            <VacationForm />
             <VacationList />
         </div>
     )
