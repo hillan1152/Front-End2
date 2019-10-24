@@ -72,7 +72,7 @@ export function SignUp({ history, token }) {
                          placeholder="User Name"
                          value={user.username}
                          onChange={handleChange}
-                     />
+                     /><br/>
                      <input
                          type="password"
                          name="password"

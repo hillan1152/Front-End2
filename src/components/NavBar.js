@@ -1,7 +1,7 @@
 import React from 'react';
 import NavModalPage from "./NavModalPage";
 import styled from "styled-components";
-// import Logo from "../img/Logo.png";
+import Logo from "../img/Logo.png";
 
 const Header = styled.div`
  display: flex;
@@ -17,6 +17,7 @@ const Header = styled.div`
 function NavBar() {
     return (
         <Header>
+            <img src={Logo} />
             <NavModalPage />
         </Header>
     )
