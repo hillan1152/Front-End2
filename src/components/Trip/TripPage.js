@@ -14,7 +14,7 @@ const Container = styled.div`
 
     .middle {
         display: flex;
-        height: 83vh;
+        height: 85vh;
 
         .left {
             width: 20%;
@@ -25,7 +25,7 @@ const Container = styled.div`
             border: 10px solid #83a931;
 
             .output {
-                height: 75.4vh;
+                height: 76.6vh;
                 background: gray;
                 
             }
