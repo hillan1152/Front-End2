@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import Login from '../Login';
+
 
 import Logo from "../../img/Logo.png";
 import './Modal.css';
