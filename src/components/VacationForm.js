@@ -5,7 +5,7 @@ import { withFormik, Form, Field } from "formik";
 
 
 
-function AddVacation() {
+function VacationForm() {
     return (
         <div>
 
@@ -28,7 +28,7 @@ const FormikAddVacation = withFormik({
     },
 
     handleSubmit(values, { resetForm }) {
-        axios.post('https://reqres.in/api/users/', values)
+        axios.post('http://bw-vacaplanning.herokuapp.com/vacations/newvaca/', values)
 
             .then(response => {
                 console.log(response)
@@ -37,7 +37,7 @@ const FormikAddVacation = withFormik({
             })
             .catch(err => console.log(err.response));
     }
-})(AddVacation);
+})(VacationForm);
 export default FormikAddVacation;
 
 

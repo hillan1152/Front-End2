@@ -18,11 +18,11 @@ const modal = (props) => {
                     <h3>Vacation Planner</h3>
                 </div>
                 <div className="modal-body">
-                    <Login/>
+                    {props.children}
                 </div>
                 <div className="modal-footer">
                     <button className="btn-cancel" onClick={props.close}>Cancel</button>
-                 <Link to="/trips"> <button className="btn-continue">CONTINUE</button></Link> 
+                
                 </div>
             </div>
         </div>

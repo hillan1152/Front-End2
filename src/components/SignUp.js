@@ -51,13 +51,13 @@ export function SignUp({ history, token }) {
                          value={user.password}
                          onChange={handleChange}
                      />
-                      {/* <input
+                      <input
                          type="password"
                          name="confirmPassword"
                          placeholder="Confirm Password"
                          value={user.password}
                          onChange={handleChange}
-                     /> */}
+                     />
                       <Link to="/trips"><button>Sign Up</button></Link>
                  </Form>
              </div>

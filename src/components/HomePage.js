@@ -124,7 +124,7 @@ class App extends Component {
                                 className="modal"
                                 show={this.state.isShowingModal1}
                                 close={this.closeModalHandler}>
-                                    Sign Up Form
+                                    
                                     <SignUp />
                             </Modal>
 
@@ -132,7 +132,7 @@ class App extends Component {
                                 className="modal"
                                 show={this.state.isShowingModal2}
                                 close={this.closeModalHandler2}>
-                                    Login Form
+                                   
                                     <Login />
                             </Modal>
                         </div>
