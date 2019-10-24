@@ -8,7 +8,7 @@ import Logo from '../img/Logo.png';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    height: 100vh;
+    /* height: 70vh; */
     width:100%;
 
     .top {
