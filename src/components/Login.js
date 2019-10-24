@@ -45,7 +45,7 @@ function Login({ history, token }) {
                         onChange={handleChange}
                     /><br/>
                     <input
-                        type="text"
+                        type="password"
                         name="password"
                         placeholder="Password"
                         value={user.password}
