@@ -4,7 +4,6 @@ import axios from "axios";
 import { withFormik, Form, Field } from "formik";
 import styled from "styled-components";
 import axiosWithAuth from "../../utils/axiosWithAuth";
-
 // const CommentPrint = styled.div `
 //     width: 100%;
 //     background: lightgray;
@@ -13,7 +12,6 @@ import axiosWithAuth from "../../utils/axiosWithAuth";
 
 const Input = styled.div`
     width:100%;
-
     /* ::placeholder {
         width:85%;
     } */
@@ -71,5 +69,3 @@ const FormikUserForm = withFormik({
     }
 })(UserForm);
 export default FormikUserForm;
-
-

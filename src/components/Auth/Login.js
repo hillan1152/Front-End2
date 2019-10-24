@@ -5,15 +5,13 @@ import * as Yup from "yup";
 import { logInUser } from "../../actions";
 //this is for the link on the button
 import { Link } from "react-router-dom";
-import axiosWithAuth from '../utils/axiosWithAuth';
-import axios from 'axios';
-
+import axios from "axios"
 
 
 function Login({ history, token }) {
     const [user, setUser] = useState({ username: '', password: '' });
 
-    useEffect((e) => {
+    useEffect(() => {
         if (token) {
             history.push("/HomePage");
         }
@@ -28,11 +26,6 @@ function Login({ history, token }) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axiosWithAuth().post('/login', user)
-            .then(res => {
-                localStorage.setItem('token', res.data.token);
-                this.props.history.push('/HomePage')
-            })
         if (user.username && user.password) {
             setUser({ username: "", password: "" });
             
@@ -79,17 +72,18 @@ const LoginWithFormik = withFormik({
         ),
         password: Yup.string().required("Password is required")
     }),
-    handleSubmit(values, { props }) {
-        axios
-            .post("http://bw-vacaplanning.herokuapp.com/login/", values)
-            .then(res => {
-                props(res.data);
-                console.log(res);
-            })
-            .catch(err => console.log(err.response));
-           }
-})(Login);
-
+         handleSubmit(values, { props }) {
+             axios
+                 .post("http://bw-vacaplanning.herokuapp.com/login/", values)
+                 .then(res => {
+                     props(res.data);
+                     console.log(res);
+                 })
+                 .catch(err => console.log(err.response));
+                }
+            
+})
+(Login);
 const mapStateToProps = state => {
     return {
         token: state.token
