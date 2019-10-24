@@ -14,7 +14,7 @@ const Container = styled.div`
     height: 84vh;
     padding: 5%;
     background: darkgray;
-    border: 1px solid black;
+    border: 3px solid #83a931;
 
         h2 {
             font-size: 4rem;
@@ -24,6 +24,7 @@ const Container = styled.div`
             border: 2px solid black;
             position: relative;
             box-shadow: 0 0  10px 5px ;
+            border-radius: 8px;
         }
    }
 `;

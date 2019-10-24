@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 
 import Modal from './Modal/Modal';
-import Login from './Login';
-import SignUp from './SignUp';
+import Login from './Auth/Login';
+import SignUp from './Auth/SignUp';
 import Header from './HeaderFront';
 import Footer from './Footer';
 

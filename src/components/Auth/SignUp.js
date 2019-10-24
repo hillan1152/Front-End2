@@ -3,7 +3,7 @@
  import { connect } from "react-redux";
  import { withFormik, Form } from "formik";
  import * as Yup from "yup";
- import { signUpUser } from "../actions";
+ import { signUpUser } from "../../actions";
  import { Link } from "react-router-dom";
  import styled from 'styled-components';
 

@@ -14,7 +14,7 @@ const Container = styled.div`
     height: 84vh;
     padding: 5%;
     border: 1px solid #83a931;
-    
+
     }
 `;
 
@@ -23,7 +23,12 @@ function About() {
         <Container >
             <Header />
                 <div className="middle">
-                
+                    <div class="card">
+                        <h3>Jeremy McWilliams</h3>
+                        <img src="./handles/Jeremy.jpg" alt="Jeremy"/>
+                        <h5>Web UI</h5>
+                        <a href="https://github.com/J2Macwilliams"><img/></a>
+                    </div>
                 </div>
             <Footer />
         </Container>
