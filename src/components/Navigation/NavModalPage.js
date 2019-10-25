@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'; 
 
-import profIcon from "../../img/profIcon.svg";
+import Icon from "../../img/profIcon.svg";
 import Modal from "../Modal/Modal";
 import styled from "styled-components";
 import Logo from '../../img/Logo.png';
@@ -61,7 +61,7 @@ function App() {
 
       <ProfIcon
         onClick={() => toggleModal(!isModalOpen)}>
-        <img src={profIcon} />
+        <img src={Icon} alt=""/>
       </ProfIcon>
 
      
@@ -69,12 +69,12 @@ function App() {
           <Modal isOpen={isModalOpen} toggle={toggleModal}>
              <Interior>
                <div className="top">
-                  <img src={Logo} />
+                  <img src={Logo} alt=""/>
                     <h3>Vacation Planner Profile</h3>
                 </div>
                 <div className="bottom">
                   <Link to="/profile-page">
-                      <img src={profIcon} />
+                      <img src={Icon} alt=""/>
                   </Link><br/>
                 </div>
                 <button onClick={() => toggleModal(false)}>cancel</button>
