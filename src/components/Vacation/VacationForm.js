@@ -7,7 +7,7 @@ const StyleForm = styled.div`
     padding: 4%;
 
     input {
-        width: 20vw;
+        width: 25vw;
         height: 3vh;
         border: 2px solid #83a931;
         border-radius: 9px;
@@ -16,7 +16,7 @@ const StyleForm = styled.div`
         margin: 5%;
     }
     button {
-        width: 10vw;
+        width: 15vw;
         height: 3vh;
         font-size: 1.5rem;
         border-radius: 9px;

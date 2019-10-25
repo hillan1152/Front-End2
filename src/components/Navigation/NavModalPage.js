@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'; 
 
 import profIcon from "../../img/profIcon.svg";
 import Modal from "../Modal/Modal";
-import ProfilePage from '../Profile/ProfilePage';
+import ProfileList from '../Profile/ProfileList';
 import styled from "styled-components";
 import Logo from '../../img/Logo.png';
 
@@ -70,6 +71,8 @@ function App() {
                   <img src={Logo} />
                     <h3>Vacation Planner Profile</h3>
                 </div>
+                <ProfileList />
+                <Link to="../Profile/ProfilePage">Profile Page</Link>
                 <button onClick={() => toggleModal(false)}>cancel</button>
              </Interior>
           </Modal>
