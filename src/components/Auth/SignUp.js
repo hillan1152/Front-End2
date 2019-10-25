@@ -23,9 +23,8 @@
             font-size: .8rem;
         }
         button {
-            width: 50%;
             background: #83a931;
-            font-size: 1rem;
+            font-size: 2rem;
             border: 1px solid black;
             border-radius: 6px;
 
