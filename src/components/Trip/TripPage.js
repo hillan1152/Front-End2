@@ -25,7 +25,7 @@ const Container = styled.div`
             border: 10px solid #83a931;
 
             .output {
-                height: 76.6vh;
+                height: 76.5vh;
                 background: gray;
                 
             }
