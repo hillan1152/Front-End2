@@ -4,14 +4,31 @@ import NavBar from "../Navigation/NavBar";
 import VacationList from "../Vacation/VacationList";
 import Footer from '../InfoPages/Footer';
 
+import styled from "styled-components";
+
+const Container = styled.div`
+    height: 100vh;
+    width:100%;
+
+    .middle {
+        display: flex;
+        height: 86vh;
+    }
+`;
+
+
+
 function Trips(props) {
     return (
-        <div>
+        <Container>
             <NavBar />
-            <VacationForm />
-            <VacationList />
+            <div className="middle"> 
+                <VacationForm />    
+                <VacationList />
+            </div>
+            
             <Footer />
-        </div>
+        </Container>
     )
 }
 

@@ -11,7 +11,7 @@ import April from '../../img/april.jpg';
 import Jeremy from '../../img/jeremy.jpg';
 import Anthony from '../../img/Anthony.png';
 import Kenneth from '../../img/kenneth.jpg';
-import Diana from '../../img/diana.jpeg';
+import Diana from '../../img/diana.jpg';
 import Christina from '../../img/Christina.png';
 
 
