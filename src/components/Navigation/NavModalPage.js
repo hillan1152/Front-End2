@@ -8,12 +8,13 @@ import Logo from '../../img/Logo.png';
 
 const Interior = styled.div`
    
-   height: 15vh;
+   height: 20vh;
 
     .top {
       height: 7vh;
       background: white;
       padding: 1.5%;
+      margin: 15% 0;
       width: 100vw;
       border-radius:8px;
 
@@ -22,15 +23,12 @@ const Interior = styled.div`
       }
 
     }
-    Link {
-      text-decoration: none;
-        margin: 2%;
-        font-size:1.4rem;
-      
+    .bottom {
+      height: 5vh;
     }
     
   button {
-    margin: 2%;
+    margin: 3%;
     padding: .5%;
     background: darkgrey;
     font-size:1rem;
@@ -74,10 +72,11 @@ function App() {
                   <img src={Logo} />
                     <h3>Vacation Planner Profile</h3>
                 </div>
-                
-                <Link to="/profile-page">
-                  <h3>Profile Page</h3>
+                <div className="bottom">
+                  <Link to="/profile-page">
+                      <img src={profIcon} />
                   </Link><br/>
+                </div>
                 <button onClick={() => toggleModal(false)}>cancel</button>
              </Interior>
           </Modal>
