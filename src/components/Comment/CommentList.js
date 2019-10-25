@@ -29,9 +29,9 @@ export default function Comment() {
     return (
         <Output >
             {data.map((comments, id) =>
-                <CommentCard 
-                key={id} 
-                data={comments} 
+                <CommentCard
+                    key={id}
+                    data={comments}
                 />)
             }
         </Output>
