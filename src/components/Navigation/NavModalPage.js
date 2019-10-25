@@ -13,8 +13,9 @@ const Interior = styled.div`
     .top {
       height: 7vh;
       background: white;
-      padding: 1%;
+      padding: 1.5%;
       width: 100vw;
+      border-radius:8px;
 
       h3 {
       font-size: 1rem;

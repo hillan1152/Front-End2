@@ -21,7 +21,7 @@ function VacationList() {
                 )
             .then((response) => {
                 console.log(response);
-                setPerson(response);
+                // setPerson(response);
 
             })
             .catch(error => {
