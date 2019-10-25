@@ -2,11 +2,11 @@ import React from 'react'
 import styled from "styled-components";
 
 const Card = styled.button`
-    width: 40%;
+    width: 30%;
     margin: 4%;
     padding: 2%;
     background: #83a931;
-    font-size:1.6rem;
+    font-size:1.4rem;
     border-radius: 7px;
     box-shadow: 2px 2px 2px;
 

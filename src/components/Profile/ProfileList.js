@@ -4,24 +4,37 @@ import axios from "axios";
 
 import ProfileCard from "./ProfileCard";
 
+import styled from "styled-components";
+
+const Output = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    padding: 3%;
+    
+`;
+
 function VacationList() {
     const [person, setPerson] = useState([
-        { 
-            name: 'Jeremy',
-            location: 'Bay Area',
-            bio: 'Midwest Man living it up in the Bay!',
-            idealExperience: 'Fun adventure with friends!'
-        },
+        { name: 'Jeremy' },
+        { name: 'April' },
+        { name: 'Anthony' },
+        { name: 'Diana' },
+        { name: 'Kenneth' },
+        { name: 'Damon' },
+        { name: 'Manuel' },
+        { name: 'Nabia' },
+        { name: 'Christina' },
+
         
 ])
     useEffect(() => {
         axios
             .get(
-                `http://bw-vacaplanning.herokuapp.com/vacations/vacations/${this.location}`
+                // `http://bw-vacaplanning.herokuapp.com/vacations/vacations/${this.location}`
                 )
             .then((response) => {
                 console.log(response);
-                setPerson(response);
+                // setPerson(response);
 
             })
             .catch(error => {
@@ -30,7 +43,7 @@ function VacationList() {
     }, []);
     return (
         <section>
-            <div>
+            <Output>
                 {person.map((item, id) => {
                 return (
                     <ProfileCard
@@ -42,7 +55,7 @@ function VacationList() {
                     />
                 );
                 })}
-            </div>
+            </Output>
            
         </section>
     )

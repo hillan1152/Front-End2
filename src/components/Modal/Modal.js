@@ -69,7 +69,7 @@ const modalPoses = {
 
 const Modal = styled(posed.div(modalPoses))`
   position: fixed;
-  background: white;
+  background: lightgrey;
   width: 35%;
   height: auto;
   top: 50%;
@@ -77,7 +77,8 @@ const Modal = styled(posed.div(modalPoses))`
   transform: translate(-50%, -50%);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 2px 4px 0 rgba(50, 50, 93, 0.1);
+  box-shadow: 0 4px 5px 0 rgba(50, 50, 93, 0.1);
+  border: 2px solid black;
 `;
 
 export default function ({ isOpen, toggle, children }) {

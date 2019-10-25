@@ -6,15 +6,30 @@ import styled from "styled-components";
 const StyleForm = styled.div`
     padding: 4%;
 
-    Form {
-        /* display: flex;
-    justify-content: center; */
-        placeholder {
-        width: 85%;
-        height: 4.8vh;
+    input {
+        width: 25vw;
+        height: 3vh;
+        border: 2px solid #83a931;
+        border-radius: 9px;
+        text-align:center;
+        font-size: 1.5rem;
+        margin: 5%;
     }
+    button {
+        width: 15vw;
+        height: 3vh;
+        font-size: 1.5rem;
+        border-radius: 9px;
+        background: black;
+        color: white;
+
+        &:hover {
+            background: white;
+            color: black;
+            border: 2px solid #83a931;
+
+        }
     }
-    
 
  `;
 

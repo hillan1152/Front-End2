@@ -12,7 +12,7 @@ const Container = styled.div`
 
     .middle {
         display: flex;
-        height: 86vh;
+        height: 84vh;
     }
 `;
 

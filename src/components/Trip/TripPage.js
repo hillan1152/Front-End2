@@ -19,13 +19,23 @@ const Container = styled.div`
         .left {
             width: 20%;
             background:black;
+
+            
+            h3{
+                color: #83a931;
+                font-size: 2.9rem;
+                margin: 2%;
+            }
+            h4{
+                font-size: 1.4rem;
+            }
         }
         .right {
             width: 80%;
             border: 10px solid #83a931;
 
             .output {
-                height: 76.5vh;
+                height: 74vh;
                 background: gray;
                 
             }
@@ -40,6 +50,7 @@ function TripPage() {
             <NavBar />
             <div className="middle">
                 <div className="left">
+                    <h3>Hawaii</h3>
                     <ContactsList />
                 </div>
                 <div className="right">

@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import NavModalPage from "./NavModalPage";
 import styled from "styled-components";
 import Logo from "../../img/Logo.svg";
+import profIcon from "../../img/profIcon.svg";
 
 const Header = styled.div`
  display: flex;
@@ -18,7 +20,9 @@ const Header = styled.div`
 function NavBar() {
     return (
         <Header>
-            <img src={Logo} alt="" />
+            <Link to="/trips">
+                <img src={Logo} alt="Vacation Planner Logo" />
+            </Link>
             <NavModalPage />
         </Header>
     )

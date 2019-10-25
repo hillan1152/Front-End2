@@ -2,11 +2,41 @@ import React from 'react';
 import { withFormik, Form, Field } from "formik";
 import axios from "axios";
 
+import styled from "styled-components";
+
+const Who = styled.div`
+
+    input {
+        /* width: 40vw; */
+        padding: 5%;
+        /* height: 5vh; */
+        text-align: center;
+        font-size: 2rem;
+        border-radius: 8px;
+        margin: 2%;
+        border: 1px solid black;
+    }
+    button {
+        font-size: 1.3rem;
+        padding: 2%;
+        border-radius: 8px;
+        background: #83a931;
+        border: 1px solid black;
+        margin: 2%;
+
+        &:hover {        
+        background: white;
+        border: 3px solid #83a931;
+        }//closes the hover
+    }
+
+
+`;
 
 function ProfileForm() {
     
     return (
-        <div>
+        <Who>
             <Form>
                 <Field type="text" name="name" placeholder="Name" /><br />
                 {/* <Field type="text" name="location" placeholder="city" /><br />
@@ -26,7 +56,7 @@ function ProfileForm() {
                 <button type="submit">Submit!</button>
 
             </Form>
-        </div>
+        </Who>
     )
 }
 

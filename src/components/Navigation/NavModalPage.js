@@ -1,10 +1,49 @@
 import React, { useState } from "react";
-// import ReactDOM from "react-dom";
-import profIcon from "../../img/profIcon.svg";
+import { Link } from 'react-router-dom'; 
+
+import Icon from "../../img/profIcon.svg";
 import Modal from "../Modal/Modal";
 import styled from "styled-components";
+import Logo from '../../img/Logo.png';
 
-// import "./styles.css";
+const Interior = styled.div`
+   
+   height: 20vh;
+
+    .top {
+      height: 7vh;
+      background: white;
+      padding: .5%;
+      margin-bottom: 5%;
+      width: 100vw;
+      border-radius:8px;
+
+      h3 {
+      font-size: 1rem;
+      }
+
+    }
+    .bottom {
+      height: 5vh;
+    }
+    
+  button {
+    margin: 3%;
+    padding: .5%;
+    background: darkgrey;
+    font-size:1rem;
+    border-radius: 7px;
+    box-shadow: 0 0 2px 2px;
+
+      &:hover {
+          color: #83a931;
+          border: 2px solid #83a931;
+          background:white;
+      }
+  }
+`;
+
+
 
 const ProfIcon = styled.div`
 border-radius: 50%;
@@ -15,29 +54,33 @@ padding: 0;
 
 function App() {
   const [isModalOpen, toggleModal] = useState(false);
-  //   const [isModalOpen2, toggleModal2] = useState(false);
+  
   return (
     <div className="App">
-      {/* <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2> */}
+     
 
       <ProfIcon
         onClick={() => toggleModal(!isModalOpen)}>
-        <img src={profIcon} />
+        <img src={Icon} alt=""/>
       </ProfIcon>
 
-      {/* <button onClick={() => toggleModal2(!isModalOpen2)}>Let's Go!</button> */}
-
-      <Modal isOpen={isModalOpen} toggle={toggleModal}>
-        <h1>test</h1>
-        <p>Other text that describes what is happening</p>
-        <button onClick={() => toggleModal(false)}>toggle</button>
-      </Modal>
-      {/* <Modal isOpen={isModalOpen2} toggle={toggleModal2}>
-        <h1>Pickles</h1>
-        <p>Other text that describes what is happening</p>
-        <button onClick={() => toggleModal2(false)}>toggle</button>
-      </Modal> */}
+     
+       
+          <Modal isOpen={isModalOpen} toggle={toggleModal}>
+             <Interior>
+               <div className="top">
+                  <img src={Logo} alt=""/>
+                    <h3>Vacation Planner Profile</h3>
+                </div>
+                <div className="bottom">
+                  <Link to="/profile-page">
+                      <img src={Icon} alt=""/>
+                  </Link><br/>
+                </div>
+                <button onClick={() => toggleModal(false)}>cancel</button>
+             </Interior>
+          </Modal>
+       
 
     </div>
   );

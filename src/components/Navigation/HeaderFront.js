@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import Logo from "../../img/Logo.png";
 import styled from "styled-components";
@@ -11,13 +12,20 @@ const Cabeza = styled.div`
         
             .logoImg {
                 width: 5rem;
+
+                &:hover {
+                    box-shadow: 3px 3px 3px white;
+                }
+
             }//closes logoImg
 `;
 
 function HeaderFront() {
     return (
         <Cabeza>
-            <img className="logoImg" src={Logo} alt="Vacation Planner Logo" />
+            <Link to="/">
+                <img className="logoImg" src={Logo} alt="Vacation Planner Logo" />
+            </Link>
         </Cabeza>
     )
 }
