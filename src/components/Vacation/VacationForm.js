@@ -4,26 +4,31 @@ import { withFormik, Form, Field } from "formik";
 import styled from "styled-components";
 
 const StyleForm = styled.div`
-display: flex;
-flex-direction: row;
-padding-top: 4%;
-//  justify-content: space-between;
+    padding: 4%;
+
+    Form {
+        /* display: flex;
+    justify-content: center; */
+        placeholder {
+        width: 85%;
+        height: 4.8vh;
+    }
+    }
+    
+
  `;
 
 
 function VacationForm() {
     return (
-        <div>
+        <StyleForm>
 
             <Form>
-                <StyleForm>
-                    <Field type="text" name="place" placeholder="Add Vacation" /><br />
-
-                    <button type="submit">Submit!</button>
-                </StyleForm>
+                <Field type="text" name="place" placeholder="Add Vacation" /><br/>
+                <button type="submit">Submit!</button>
             </Form>
 
-        </div>
+        </StyleForm>
     )
 }
 

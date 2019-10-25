@@ -3,6 +3,15 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import VacationCard from "./VacationCard";
 
+import styled from "styled-components";
+
+const Output = styled.div`
+    display: flex;
+    flex-direction:column;
+    width: 60%;
+    margin-top: 10%;
+`;
+
 function VacationList() {
     const [trip, setTrip] = useState([])
     useEffect(() => {
@@ -20,7 +29,7 @@ function VacationList() {
             });
     }, []);
     return (
-        <div>
+        <Output>
             {trip.map((item, vacaid) => {
               return (
                   <Link to="/trip-page">
@@ -31,7 +40,7 @@ function VacationList() {
                   </Link>
               );
             })}
-        </div>
+        </Output>
     )
 }
 
