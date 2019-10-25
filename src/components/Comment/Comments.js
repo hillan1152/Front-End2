@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from "axios";
 import { withFormik, Form, Field } from "formik";
 import styled from "styled-components";
@@ -35,11 +36,11 @@ const Input = styled.div`
 `;
 
 function UserForm({ status }) {
-    const [comments, setComment] = useState([])
-    console.log(useState);
-    useEffect(() => {
-        status && setComment(comments => [...comments, status])
-    }, [status])
+    // const [comments, setComment] = useState([])
+    // console.log(useState);
+    // useEffect(() => {
+    //     status && setComment(comments => [...comments, status])
+    // }, [status])
     return (
         <Input>
             {/* <div>
@@ -54,6 +55,8 @@ function UserForm({ status }) {
             </div> */}
 
             <Form>
+
+
                 <Field
                     component="textarea"
                     type="text"
@@ -62,6 +65,8 @@ function UserForm({ status }) {
                 />
                 <button type="submit">Submit!</button>
             </Form>
+
+            
 
         </Input>
     )

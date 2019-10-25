@@ -69,7 +69,7 @@ const modalPoses = {
 
 const Modal = styled(posed.div(modalPoses))`
   position: fixed;
-  background: white;
+  background: lightgrey;
   width: 35%;
   height: auto;
   top: 50%;
