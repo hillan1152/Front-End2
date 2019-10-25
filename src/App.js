@@ -6,7 +6,6 @@ import TripPage from "./components/Trip/TripPage";
 import ProfilePage from "./components/Profile/ProfilePage";
 import AboutPage from "./components/InfoPages/AboutPage";
 import SiteMapPage from "./components/InfoPages/SiteMapPage";
-import NavModalPage from "./components/Navigation/NavModalPage";
 
 
 import './App.css';
@@ -43,11 +42,6 @@ function App() {
       <Route exact path="/site-map-page"
         render={(props) =>
           <SiteMapPage {...props} />
-        } />
-
-        <Route exact path="/nav-modal-page"
-        render={(props) =>
-          <NavModalPage {...props} />
         } />
 
 
