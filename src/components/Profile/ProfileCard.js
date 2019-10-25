@@ -3,7 +3,7 @@ import React from 'react'
 import styled from "styled-components";
 
 const Output = styled.div`
-    width: 12%;
+    width: 14%;
     background: lightgrey;
     border-radius: 8px;
     border: 2px solid black;

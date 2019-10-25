@@ -25,6 +25,9 @@ const Container = styled.div`
                 font-size: 2.9rem;
                 margin: 2%;
             }
+            h4{
+                font-size: 1.4rem;
+            }
         }
         .right {
             width: 80%;

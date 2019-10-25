@@ -7,24 +7,10 @@ import ProfileCard from "./ProfileCard";
 import styled from "styled-components";
 
 const Output = styled.div`
-    /* width: 100%; */
-    /* padding: 3%; */
-    /* height: 10vh; */
-    /* background: lightgrey; */
-    /* border-radius: 8px; */
-    /* box-shadow: 0 0 5px 5px darkgrey; */
-    /* border: 2px solid black; */
-    /* margin: 5%; */
     display:flex;
     flex-wrap: wrap;
+    padding: 3%;
     
-    /* justify-content:center;
-    align-items:center; */
-
-    /* h2 {
-        /* font-size: 2.5rem; */
-        padding: 3%;
-    } */
 `;
 
 function VacationList() {

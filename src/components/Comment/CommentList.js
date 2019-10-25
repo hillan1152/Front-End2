@@ -4,10 +4,12 @@ import CommentCard from './CommentCard';
 
 import styled from "styled-components";
 
+
 const Output = styled.div`
     height: 84vh;
     position: sticky;
 `;
+
 
 export default function Comment() {
     const [data, setData] = useState([]);

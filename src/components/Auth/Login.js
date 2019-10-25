@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { logInUser } from "../../actions";
 //this is for the link on the button
 import { Link } from "react-router-dom";
-
+import axios from "axios"
 
 
 function Login({ history, token }) {
@@ -72,11 +72,18 @@ const LoginWithFormik = withFormik({
         ),
         password: Yup.string().required("Password is required")
     }),
-     handleSubmit(values, { props }) { //import from action
-         props.logInUser(values)}
+         handleSubmit(values, { props }) {
+             axios
+                 .post("http://bw-vacaplanning.herokuapp.com/login/", values)
+                 .then(res => {
+                     props(res.data);
+                     console.log(res);
+                 })
+                 .catch(err => console.log(err.response));
+                }
+            
 })
 (Login);
-
 const mapStateToProps = state => {
     return {
         token: state.token
