@@ -13,8 +13,8 @@ const Interior = styled.div`
     .top {
       height: 7vh;
       background: white;
-      padding: 1.5%;
-      margin: 15% 0;
+      padding: .5%;
+      margin-bottom: 5%;
       width: 100vw;
       border-radius:8px;
 
