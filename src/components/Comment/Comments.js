@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { withFormik, Form, Field } from "formik";
 import styled from "styled-components";
-
+import axiosWithAuth from "../../utils/axiosWithAuth";
 // const CommentPrint = styled.div `
 //     width: 100%;
 //     background: lightgray;
@@ -74,8 +74,9 @@ const FormikUserForm = withFormik({
         };
     },
 
-    handleSubmit(values, {  resetForm }) {
-        axios.post('http://bw-vacaplanning.herokuapp.com/comments/newcom', values)
+    handleSubmit(values, { setStatus, resetForm }) {
+        axiosWithAuth().post('http://bw-vacaplanning.herokuapp.com/comments/newcom', values)
+
             .then(response => {
                 console.log(response)
                 // setStatus(response.data);
@@ -85,5 +86,3 @@ const FormikUserForm = withFormik({
     }
 })(UserForm);
 export default FormikUserForm;
-
-
