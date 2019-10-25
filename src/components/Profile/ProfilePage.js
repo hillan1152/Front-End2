@@ -18,11 +18,11 @@ const Container = styled.div`
 
         .top {
             background:black;
-            height: 30vh;
+            height: 35vh;
         }
         .bottom {
             background:darkgrey;
-            height: 57vh;
+            height: 52vh;
             display: flex;
             justify-content:center;
             align-items: center;

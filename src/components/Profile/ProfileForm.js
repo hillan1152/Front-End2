@@ -7,8 +7,9 @@ import styled from "styled-components";
 const Who = styled.div`
 
     input {
-        width: 40vw;
-        height: 5vh;
+        /* width: 40vw; */
+        padding: 5%;
+        /* height: 5vh; */
         text-align: center;
         font-size: 2rem;
         border-radius: 8px;
