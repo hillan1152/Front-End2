@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavModalPage from "./NavModalPage";
 import styled from "styled-components";
 import Logo from "../../img/Logo.svg";
+import profIcon from "../../img/profIcon.svg";
 
 const Header = styled.div`
  display: flex;

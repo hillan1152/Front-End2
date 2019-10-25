@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import profIcon from "../../img/profIcon.svg";
 import Modal from "../Modal/Modal";
-import ProfileList from '../Profile/ProfileList';
 import styled from "styled-components";
 import Logo from '../../img/Logo.png';
 
@@ -31,7 +30,6 @@ const Interior = styled.div`
     }
     
   button {
-    /* width: 27%; */
     margin: 2%;
     padding: .5%;
     background: darkgrey;
@@ -39,13 +37,11 @@ const Interior = styled.div`
     border-radius: 7px;
     box-shadow: 0 0 2px 2px;
 
-    &:hover {
-        color: #83a931;
-        border: 2px solid #83a931;
-        background:white;
-    }
-
-
+      &:hover {
+          color: #83a931;
+          border: 2px solid #83a931;
+          background:white;
+      }
   }
 `;
 
@@ -78,7 +74,7 @@ function App() {
                   <img src={Logo} />
                     <h3>Vacation Planner Profile</h3>
                 </div>
-                {/* <ProfileList /> */}
+                
                 <Link to="/profile-page">
                   <h3>Profile Page</h3>
                   </Link><br/>
